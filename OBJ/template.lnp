@@ -13,6 +13,7 @@
 "..\obj\ft5206.o"
 "..\obj\touch.o"
 "..\obj\timer.o"
+"..\obj\sram.o"
 "..\obj\delay.o"
 "..\obj\sys.o"
 "..\obj\usart.o"
@@ -106,6 +107,12 @@
 "..\obj\lv_theme_night.o"
 "..\obj\lv_theme_templ.o"
 "..\obj\lv_theme_zen.o"
+"..\obj\lv_port_disp.o"
+"..\obj\lv_port_indev.o"
+"..\obj\demo.o"
+"..\obj\lv_test_theme_1.o"
+"..\obj\lv_test_theme_2.o"
+"..\obj\img_bubble_pattern.o"
 --strict --scatter "..\OBJ\template.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

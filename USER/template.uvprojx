@@ -337,7 +337,7 @@
               <MiscControls>--diag_suppress=68  --diag_suppress=111  --diag_suppress=550</MiscControls>
               <Define>STM32F40_41xxx,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\CORE;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\USER;..\HARDWARE\LED;..\HARDWARE\LCD;..\HARDWARE\KEY;..\HARDWARE\IIC;..\HARDWARE\24CXX;..\FWLIB\inc;..\HARDWARE\TOUCH;..\GUI;..\GUI\lvgl;..\GUI\lvgl_driver;..\GUI\lv_examples;..\HARDWARE\TIMER</IncludePath>
+              <IncludePath>..\CORE;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\USER;..\HARDWARE\LED;..\HARDWARE\LCD;..\HARDWARE\KEY;..\HARDWARE\IIC;..\HARDWARE\24CXX;..\FWLIB\inc;..\HARDWARE\TOUCH;..\GUI;..\GUI\lvgl;..\GUI\lvgl_driver;..\GUI\lv_examples;..\HARDWARE\TIMER;..\HARDWARE\SRAM</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -455,6 +455,11 @@
               <FileName>timer.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HARDWARE\TIMER\timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>sram.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\SRAM\sram.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -951,10 +956,42 @@
               <FileType>1</FileType>
               <FilePath>..\GUI\lvgl\src\lv_themes\lv_theme_zen.c</FilePath>
             </File>
+            <File>
+              <FileName>lv_port_disp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\GUI\lvgl_driver\lv_port_disp.c</FilePath>
+            </File>
+            <File>
+              <FileName>lv_port_indev.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\GUI\lvgl_driver\lv_port_indev.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
           <GroupName>GUI_APP</GroupName>
+          <Files>
+            <File>
+              <FileName>demo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\GUI\lv_examples\lv_apps\demo\demo.c</FilePath>
+            </File>
+            <File>
+              <FileName>lv_test_theme_1.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\GUI\lv_examples\lv_tests\lv_test_theme\lv_test_theme_1.c</FilePath>
+            </File>
+            <File>
+              <FileName>lv_test_theme_2.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\GUI\lv_examples\lv_tests\lv_test_theme\lv_test_theme_2.c</FilePath>
+            </File>
+            <File>
+              <FileName>img_bubble_pattern.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\GUI\lv_examples\lv_apps\demo\img_bubble_pattern.c</FilePath>
+            </File>
+          </Files>
         </Group>
       </Groups>
     </Target>
