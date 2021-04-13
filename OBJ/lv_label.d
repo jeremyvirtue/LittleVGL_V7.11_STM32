@@ -2,6 +2,7 @@
 ..\obj\lv_label.o: ..\GUI\lvgl\src\lv_widgets\lv_label.h
 ..\obj\lv_label.o: ..\GUI\lvgl\src\lv_widgets\../lv_conf_internal.h
 ..\obj\lv_label.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\lv_label.o: ..\GUI\lvgl\src\lv_widgets\../lv_conf_kconfig.h
 ..\obj\lv_label.o: ..\GUI\lvgl\src\lv_widgets\../../../lv_conf.h
 ..\obj\lv_label.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
 ..\obj\lv_label.o: ..\GUI\lvgl\src\lv_widgets\../lv_core/lv_obj.h
@@ -32,6 +33,7 @@
 ..\obj\lv_label.o: ..\GUI\lvgl\src\lv_widgets\../lv_core/../lv_draw/lv_draw_label.h
 ..\obj\lv_label.o: ..\GUI\lvgl\src\lv_widgets\../lv_core/../lv_draw/../lv_misc/lv_bidi.h
 ..\obj\lv_label.o: ..\GUI\lvgl\src\lv_widgets\../lv_core/../lv_draw/../lv_misc/lv_txt.h
+..\obj\lv_label.o: ..\GUI\lvgl\src\lv_widgets\../lv_core/../lv_draw/../lv_misc/lv_printf.h
 ..\obj\lv_label.o: ..\GUI\lvgl\src\lv_widgets\../lv_core/../lv_draw/lv_draw_line.h
 ..\obj\lv_label.o: ..\GUI\lvgl\src\lv_widgets\../lv_core/../lv_draw/lv_draw_img.h
 ..\obj\lv_label.o: ..\GUI\lvgl\src\lv_widgets\../lv_core/../lv_draw/lv_img_decoder.h
@@ -43,7 +45,6 @@
 ..\obj\lv_label.o: ..\GUI\lvgl\src\lv_widgets\../lv_draw/lv_draw_arc.h
 ..\obj\lv_label.o: ..\GUI\lvgl\src\lv_widgets\../lv_core/lv_group.h
 ..\obj\lv_label.o: ..\GUI\lvgl\src\lv_widgets\../lv_misc/lv_txt_ap.h
-..\obj\lv_label.o: ..\GUI\lvgl\src\lv_widgets\../lv_misc/lv_printf.h
 ..\obj\lv_label.o: ..\GUI\lvgl\src\lv_widgets\../lv_themes/lv_theme.h
 ..\obj\lv_label.o: ..\GUI\lvgl\src\lv_widgets\../lv_themes/lv_theme_empty.h
 ..\obj\lv_label.o: ..\GUI\lvgl\src\lv_widgets\../lv_themes/lv_theme_template.h

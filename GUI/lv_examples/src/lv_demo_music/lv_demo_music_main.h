@@ -19,9 +19,7 @@ extern "C" {
 /*********************
  *      DEFINES
  *********************/
-LV_FONT_DECLARE(lv_font_montserrat_10);//申明字体
-LV_FONT_DECLARE(lv_font_montserrat_12);//申明字体
-LV_FONT_DECLARE(lv_font_montserrat_30);//申明字体 
+
 /**********************
  *      TYPEDEFS
  **********************/

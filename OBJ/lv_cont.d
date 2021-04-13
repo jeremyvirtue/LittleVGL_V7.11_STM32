@@ -2,6 +2,7 @@
 ..\obj\lv_cont.o: ..\GUI\lvgl\src\lv_widgets\lv_cont.h
 ..\obj\lv_cont.o: ..\GUI\lvgl\src\lv_widgets\../lv_conf_internal.h
 ..\obj\lv_cont.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\lv_cont.o: ..\GUI\lvgl\src\lv_widgets\../lv_conf_kconfig.h
 ..\obj\lv_cont.o: ..\GUI\lvgl\src\lv_widgets\../../../lv_conf.h
 ..\obj\lv_cont.o: ..\GUI\lvgl\src\lv_widgets\../lv_core/lv_obj.h
 ..\obj\lv_cont.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
@@ -31,6 +32,8 @@
 ..\obj\lv_cont.o: ..\GUI\lvgl\src\lv_widgets\../lv_core/../lv_draw/lv_draw_label.h
 ..\obj\lv_cont.o: ..\GUI\lvgl\src\lv_widgets\../lv_core/../lv_draw/../lv_misc/lv_bidi.h
 ..\obj\lv_cont.o: ..\GUI\lvgl\src\lv_widgets\../lv_core/../lv_draw/../lv_misc/lv_txt.h
+..\obj\lv_cont.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\lv_cont.o: ..\GUI\lvgl\src\lv_widgets\../lv_core/../lv_draw/../lv_misc/lv_printf.h
 ..\obj\lv_cont.o: ..\GUI\lvgl\src\lv_widgets\../lv_core/../lv_draw/lv_draw_line.h
 ..\obj\lv_cont.o: ..\GUI\lvgl\src\lv_widgets\../lv_core/../lv_draw/lv_draw_img.h
 ..\obj\lv_cont.o: ..\GUI\lvgl\src\lv_widgets\../lv_core/../lv_draw/lv_img_decoder.h

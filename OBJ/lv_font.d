@@ -2,6 +2,7 @@
 ..\obj\lv_font.o: ..\GUI\lvgl\src\lv_font\lv_font.h
 ..\obj\lv_font.o: ..\GUI\lvgl\src\lv_font\../lv_conf_internal.h
 ..\obj\lv_font.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\lv_font.o: ..\GUI\lvgl\src\lv_font\../lv_conf_kconfig.h
 ..\obj\lv_font.o: ..\GUI\lvgl\src\lv_font\../../../lv_conf.h
 ..\obj\lv_font.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 ..\obj\lv_font.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h

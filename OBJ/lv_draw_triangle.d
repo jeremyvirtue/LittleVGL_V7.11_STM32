@@ -6,6 +6,7 @@
 ..\obj\lv_draw_triangle.o: ..\GUI\lvgl\src\lv_draw\../lv_core/../lv_font/lv_font.h
 ..\obj\lv_draw_triangle.o: ..\GUI\lvgl\src\lv_draw\../lv_core/../lv_font/../lv_conf_internal.h
 ..\obj\lv_draw_triangle.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\lv_draw_triangle.o: ..\GUI\lvgl\src\lv_draw\../lv_core/../lv_font/../lv_conf_kconfig.h
 ..\obj\lv_draw_triangle.o: ..\GUI\lvgl\src\lv_draw\../lv_core/../lv_font/../../../lv_conf.h
 ..\obj\lv_draw_triangle.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 ..\obj\lv_draw_triangle.o: ..\GUI\lvgl\src\lv_draw\../lv_core/../lv_font/lv_symbol_def.h

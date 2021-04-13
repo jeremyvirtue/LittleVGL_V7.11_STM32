@@ -5,6 +5,7 @@
 ..\obj\lv_utils.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 ..\obj\lv_utils.o: ..\GUI\lvgl\src\lv_misc\lv_math.h
 ..\obj\lv_utils.o: ..\GUI\lvgl\src\lv_misc\../lv_conf_internal.h
+..\obj\lv_utils.o: ..\GUI\lvgl\src\lv_misc\../lv_conf_kconfig.h
 ..\obj\lv_utils.o: ..\GUI\lvgl\src\lv_misc\../../../lv_conf.h
 ..\obj\lv_utils.o: ..\GUI\lvgl\src\lv_misc\lv_printf.h
 ..\obj\lv_utils.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h

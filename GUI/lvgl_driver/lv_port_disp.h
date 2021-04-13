@@ -21,7 +21,7 @@ extern "C" {
 /*********************
  *      DEFINES
  *********************/
-
+void lv_port_disp_init(void);
 /**********************
  *      TYPEDEFS
  **********************/
@@ -29,11 +29,10 @@ extern "C" {
 /**********************
  * GLOBAL PROTOTYPES
  **********************/
-void lv_port_disp_init(void);
+
 /**********************
  *      MACROS
  **********************/
-
 
 #ifdef __cplusplus
 } /* extern "C" */

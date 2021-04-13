@@ -9,9 +9,8 @@
 /*********************
  *      INCLUDES
  *********************/
-#include "lv_port_indev.h"
+#include "lv_port_indev.h" 
 #include "touch.h"
-
 /*********************
  *      DEFINES
  *********************/
@@ -30,14 +29,9 @@ static bool touchpad_read(lv_indev_drv_t * indev_drv, lv_indev_data_t * data);
 /**********************
  *  STATIC VARIABLES
  **********************/
-lv_indev_t * indev_touchpad;
-// lv_indev_t * indev_mouse;
-// lv_indev_t * indev_keypad;
-// lv_indev_t * indev_encoder;
-// lv_indev_t * indev_button;
+lv_indev_t * indev_touchpad; 
 
-// static int32_t encoder_diff;
-// static lv_indev_state_t encoder_state;
+ 
 
 /**********************
  *      MACROS
@@ -48,7 +42,33 @@ lv_indev_t * indev_touchpad;
  **********************/
 
 void lv_port_indev_init(void)
-{ 
+{
+    /* Here you will find example implementation of input devices supported by LittelvGL:
+     *  - Touchpad
+     *  - Mouse (with cursor support)
+     *  - Keypad (supports GUI usage only with key)
+     *  - Encoder (supports GUI usage only with: left, right, push)
+     *  - Button (external buttons to press points on the screen)
+     *
+     *  The `..._read()` function are only examples.
+     *  You should shape them according to your hardware
+     */
+
+    // lv_indev_drv_t indev_drv;
+
+    // /*------------------
+    //  * Touchpad
+    //  * -----------------*/
+
+    // /*Initialize your touchpad if you have*/
+    // touchpad_init();
+
+    // /*Register a touchpad input device*/
+    // lv_indev_drv_init(&indev_drv);
+    // indev_drv.type = LV_INDEV_TYPE_POINTER;
+    // indev_drv.read_cb = touchpad_read;
+    // indev_touchpad = lv_indev_drv_register(&indev_drv); 
+
     lv_indev_drv_t indev_drv;
 
     /*------------------
@@ -60,14 +80,12 @@ void lv_port_indev_init(void)
     indev_drv.type = LV_INDEV_TYPE_POINTER;
     indev_drv.read_cb = touchpad_read;
     lv_indev_drv_register(&indev_drv);
-    
+ 
 }
 
 /**********************
  *   STATIC FUNCTIONS
  **********************/
-
-
 
 /*------------------
  * Touchpad
@@ -99,9 +117,7 @@ static bool touchpad_read(lv_indev_drv_t * indev_drv, lv_indev_data_t * data)
     /*Return `false` because we are not buffering and no more data to read*/
     return false;
 }
-
  
-  
 
 #else /* Enable this file at the top */
 

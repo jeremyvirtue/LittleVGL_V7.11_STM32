@@ -2,6 +2,7 @@
 ..\obj\lv_anim.o: ..\GUI\lvgl\src\lv_misc\lv_anim.h
 ..\obj\lv_anim.o: ..\GUI\lvgl\src\lv_misc\../lv_conf_internal.h
 ..\obj\lv_anim.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\lv_anim.o: ..\GUI\lvgl\src\lv_misc\../lv_conf_kconfig.h
 ..\obj\lv_anim.o: ..\GUI\lvgl\src\lv_misc\../../../lv_conf.h
 ..\obj\lv_anim.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 ..\obj\lv_anim.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
@@ -21,8 +22,4 @@
 ..\obj\lv_anim.o: ..\GUI\lvgl\src\lv_misc\../lv_draw/../lv_misc/lv_color.h
 ..\obj\lv_anim.o: ..\GUI\lvgl\src\lv_misc\../lv_draw/../lv_misc/lv_area.h
 ..\obj\lv_anim.o: ..\GUI\lvgl\src\lv_misc\../lv_draw/../lv_misc/lv_fs.h
-..\obj\lv_anim.o: ..\GUI\lvgl\src\lv_misc\../lv_draw/../lv_core/lv_style.h
-..\obj\lv_anim.o: ..\GUI\lvgl\src\lv_misc\../lv_draw/../lv_core/../lv_font/lv_font.h
-..\obj\lv_anim.o: ..\GUI\lvgl\src\lv_misc\../lv_draw/../lv_core/../lv_font/lv_symbol_def.h
-..\obj\lv_anim.o: ..\GUI\lvgl\src\lv_misc\../lv_draw/../lv_core/../lv_draw/lv_draw_blend.h
-..\obj\lv_anim.o: ..\GUI\lvgl\src\lv_misc\../lv_draw/../lv_core/../lv_draw/lv_draw_mask.h
+..\obj\lv_anim.o: ..\GUI\lvgl\src\lv_misc\../lv_draw/lv_draw_mask.h

@@ -1,5 +1,6 @@
 {
   "files.associations": {
-    "lv_port_disp_template.h": "c"
+    "lv_port_indev_template.h": "c",
+    "lv_port_indev.h": "c"
   }
 }

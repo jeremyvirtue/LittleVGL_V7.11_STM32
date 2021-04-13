@@ -39,6 +39,7 @@
 ..\obj\timer.o: ..\GUI\lvgl\lvgl.h
 ..\obj\timer.o: ..\GUI\lvgl\src/lv_misc/lv_log.h
 ..\obj\timer.o: ..\GUI\lvgl\src/lv_misc/../lv_conf_internal.h
+..\obj\timer.o: ..\GUI\lvgl\src/lv_misc/../lv_conf_kconfig.h
 ..\obj\timer.o: ..\GUI\lvgl\src/lv_misc/../../../lv_conf.h
 ..\obj\timer.o: ..\GUI\lvgl\src/lv_misc/lv_task.h
 ..\obj\timer.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
@@ -68,6 +69,8 @@
 ..\obj\timer.o: ..\GUI\lvgl\src/lv_core/../lv_draw/lv_draw_label.h
 ..\obj\timer.o: ..\GUI\lvgl\src/lv_core/../lv_draw/../lv_misc/lv_bidi.h
 ..\obj\timer.o: ..\GUI\lvgl\src/lv_core/../lv_draw/../lv_misc/lv_txt.h
+..\obj\timer.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\timer.o: ..\GUI\lvgl\src/lv_core/../lv_draw/../lv_misc/lv_printf.h
 ..\obj\timer.o: ..\GUI\lvgl\src/lv_core/../lv_draw/lv_draw_line.h
 ..\obj\timer.o: ..\GUI\lvgl\src/lv_core/../lv_draw/lv_draw_img.h
 ..\obj\timer.o: ..\GUI\lvgl\src/lv_core/../lv_draw/lv_img_decoder.h
@@ -85,8 +88,6 @@
 ..\obj\timer.o: ..\GUI\lvgl\src/lv_themes/lv_theme_mono.h
 ..\obj\timer.o: ..\GUI\lvgl\src/lv_font/lv_font_loader.h
 ..\obj\timer.o: ..\GUI\lvgl\src/lv_font/lv_font_fmt_txt.h
-..\obj\timer.o: ..\GUI\lvgl\src/lv_misc/lv_printf.h
-..\obj\timer.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
 ..\obj\timer.o: ..\GUI\lvgl\src/lv_widgets/lv_btn.h
 ..\obj\timer.o: ..\GUI\lvgl\src/lv_widgets/lv_cont.h
 ..\obj\timer.o: ..\GUI\lvgl\src/lv_widgets/lv_imgbtn.h

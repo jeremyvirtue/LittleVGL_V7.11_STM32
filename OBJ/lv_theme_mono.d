@@ -3,6 +3,7 @@
 ..\obj\lv_theme_mono.o: ..\GUI\lvgl\src\lv_themes\../../src/lv_misc/lv_log.h
 ..\obj\lv_theme_mono.o: ..\GUI\lvgl\src\lv_themes\../../src/lv_misc/../lv_conf_internal.h
 ..\obj\lv_theme_mono.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\lv_theme_mono.o: ..\GUI\lvgl\src\lv_themes\../../src/lv_misc/../lv_conf_kconfig.h
 ..\obj\lv_theme_mono.o: ..\GUI\lvgl\src\lv_themes\../../src/lv_misc/../../../lv_conf.h
 ..\obj\lv_theme_mono.o: ..\GUI\lvgl\src\lv_themes\../../src/lv_misc/lv_task.h
 ..\obj\lv_theme_mono.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
@@ -32,6 +33,8 @@
 ..\obj\lv_theme_mono.o: ..\GUI\lvgl\src\lv_themes\../../src/lv_core/../lv_draw/lv_draw_label.h
 ..\obj\lv_theme_mono.o: ..\GUI\lvgl\src\lv_themes\../../src/lv_core/../lv_draw/../lv_misc/lv_bidi.h
 ..\obj\lv_theme_mono.o: ..\GUI\lvgl\src\lv_themes\../../src/lv_core/../lv_draw/../lv_misc/lv_txt.h
+..\obj\lv_theme_mono.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+..\obj\lv_theme_mono.o: ..\GUI\lvgl\src\lv_themes\../../src/lv_core/../lv_draw/../lv_misc/lv_printf.h
 ..\obj\lv_theme_mono.o: ..\GUI\lvgl\src\lv_themes\../../src/lv_core/../lv_draw/lv_draw_line.h
 ..\obj\lv_theme_mono.o: ..\GUI\lvgl\src\lv_themes\../../src/lv_core/../lv_draw/lv_draw_img.h
 ..\obj\lv_theme_mono.o: ..\GUI\lvgl\src\lv_themes\../../src/lv_core/../lv_draw/lv_img_decoder.h
@@ -49,8 +52,6 @@
 ..\obj\lv_theme_mono.o: ..\GUI\lvgl\src\lv_themes\../../src/lv_themes/lv_theme_mono.h
 ..\obj\lv_theme_mono.o: ..\GUI\lvgl\src\lv_themes\../../src/lv_font/lv_font_loader.h
 ..\obj\lv_theme_mono.o: ..\GUI\lvgl\src\lv_themes\../../src/lv_font/lv_font_fmt_txt.h
-..\obj\lv_theme_mono.o: ..\GUI\lvgl\src\lv_themes\../../src/lv_misc/lv_printf.h
-..\obj\lv_theme_mono.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
 ..\obj\lv_theme_mono.o: ..\GUI\lvgl\src\lv_themes\../../src/lv_widgets/lv_btn.h
 ..\obj\lv_theme_mono.o: ..\GUI\lvgl\src\lv_themes\../../src/lv_widgets/lv_cont.h
 ..\obj\lv_theme_mono.o: ..\GUI\lvgl\src\lv_themes\../../src/lv_widgets/lv_imgbtn.h

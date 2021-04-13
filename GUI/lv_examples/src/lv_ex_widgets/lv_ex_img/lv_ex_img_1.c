@@ -1,4 +1,4 @@
-#include "../../../lv_examples.h"
+﻿#include "../../../lv_examples.h"
 #if LV_USE_IMG
 
 /* Find the image here: https://github.com/lvgl/lv_examples/tree/master/assets */
@@ -9,8 +9,8 @@ lv_task_t* task1 = NULL;//任务句柄指针
 lv_obj_t* img1;
 void task1_cb(lv_task_t* task)  {
     static int angle = 0;
-    angle += 50;
-    if (angle > 3600)
+    angle += 1;
+    if (angle >= 3600)
         angle = 0;
     lv_img_set_angle(img1, angle);
 
