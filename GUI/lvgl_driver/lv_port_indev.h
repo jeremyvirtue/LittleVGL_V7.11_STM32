@@ -22,11 +22,11 @@ extern "C" {
 /*********************
  *      DEFINES
  *********************/
-
+void lv_port_indev_init(void);
 /**********************
  *      TYPEDEFS
  **********************/
-void lv_port_indev_init(void);
+
 /**********************
  * GLOBAL PROTOTYPES
  **********************/

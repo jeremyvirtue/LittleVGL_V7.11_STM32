@@ -9,14 +9,39 @@
 #include "sram.h"
 #include "lvgl.h"
 #include "lv_port_disp.h"
-#include "lv_port_indev.h"
-#include "lv_apps\demo\demo.h" 
-#include "lv_tests\lv_test_theme\lv_test_theme_1.h" 
-#include "lv_tests\lv_test_theme\lv_test_theme_2.h"
+#include "lv_port_indev.h"   
+#include "lv_examples/lv_examples.h"
  
  
- #define TEST_NUM	1
-	
+// #define TEST_NUM	1 
+//LV_IMG_DECLARE(photo);
+
+//lv_task_t* task1 = NULL;//任务句柄指针
+//lv_obj_t* img1;
+//void task1_cb(lv_task_t* task)  {
+//    static int angle = 0;
+//    angle += 50;
+//    if (angle > 3600)
+//        angle = 0;
+//    lv_img_set_angle(img1, angle);
+
+//}
+//void lv_ex_img_1(void)
+//{
+//    img1 = lv_img_create(lv_scr_act(), NULL); 
+//    lv_img_set_src(img1, &photo);
+//    lv_obj_align(img1, NULL, LV_ALIGN_CENTER, 0, -20);
+
+//    //lv_img_set_angle(img1, 458);
+
+
+//    lv_obj_t * img2 = lv_img_create(lv_scr_act(), NULL);
+//    lv_img_set_src(img2, LV_SYMBOL_OK "Accept");
+//    lv_obj_align(img2, img1, LV_ALIGN_OUT_BOTTOM_MID, 0, 20);
+//    task1 = lv_task_create(task1_cb, 10, LV_TASK_PRIO_MID, NULL);
+//}
+
+ 
 int main(void)
 { 
 
@@ -37,13 +62,12 @@ int main(void)
 	lv_port_indev_init();	//lvgl输入接口初始化,放在lv_init()的后面
 	
 	//通过TEST_NUM的值来选择运行不同的例程
-	#if(TEST_NUM==1)
-		demo_create();			
-	#elif(TEST_NUM==2)
-		lv_test_theme_1(lv_theme_night_init(210, NULL));
-	#else
-		lv_test_theme_2();
-	#endif
+// lv_ex_img_1();
+//	lv_demo_stress();
+//	lv_ex_img_1();
+// 	lv_demo_widgets(); 
+lv_demo_keypad_encoder();
+//lv_ex_cpicker_2();
 	while(1){
 		tp_dev.scan(0);
 		lv_task_handler();
