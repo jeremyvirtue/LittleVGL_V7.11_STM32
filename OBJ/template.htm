@@ -3,7 +3,7 @@
 <title>Static Call Graph - [..\OBJ\template.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image ..\OBJ\template.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Mon Apr 12 18:06:16 2021
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Mon Apr 12 20:25:39 2021
 <BR><P>
 <H3>Maximum Stack Usage =        956 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -745,8 +745,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[10c]"></a>KEY_Scan</STRONG> (Thumb, 188 bytes, Stack size 8 bytes, key.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInputDataBit
-<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
+<BR><BR>[Calls]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
+<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInputDataBit
 </UL>
 
 <P><STRONG><a name="[10e]"></a>IIC_Init</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, myiic.o(.text))
@@ -780,8 +780,8 @@ Global Symbols
 <P><STRONG><a name="[111]"></a>IIC_Wait_Ack</STRONG> (Thumb, 82 bytes, Stack size 8 bytes, myiic.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = IIC_Wait_Ack &rArr; IIC_Stop
 </UL>
-<BR>[Calls]<UL><LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Stop
-<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_us
+<BR>[Calls]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_us
+<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Stop
 </UL>
 <BR>[Called By]<UL><LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AT24CXX_WriteOneByte
 <LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AT24CXX_ReadOneByte
@@ -815,9 +815,9 @@ Global Symbols
 <P><STRONG><a name="[115]"></a>IIC_Read_Byte</STRONG> (Thumb, 94 bytes, Stack size 16 bytes, myiic.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = IIC_Read_Byte &rArr; IIC_NAck
 </UL>
-<BR>[Calls]<UL><LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_NAck
+<BR>[Calls]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_us
+<LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_NAck
 <LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Ack
-<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_us
 </UL>
 <BR>[Called By]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AT24CXX_ReadOneByte
 </UL>
@@ -839,29 +839,29 @@ Global Symbols
 <LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Stop
 <LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Start
 </UL>
-<BR>[Called By]<UL><LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AT24CXX_Read
+<BR>[Called By]<UL><LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TP_Get_Adjdata
+<LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AT24CXX_Read
 <LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AT24CXX_Check
 <LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AT24CXX_ReadLenByte
-<LI><a href="#[13d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TP_Get_Adjdata
 </UL>
 
 <P><STRONG><a name="[118]"></a>AT24CXX_WriteOneByte</STRONG> (Thumb, 80 bytes, Stack size 16 bytes, 24cxx.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = AT24CXX_WriteOneByte &rArr; IIC_Send_Byte
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = AT24CXX_WriteOneByte &rArr; delay_ms
 </UL>
-<BR>[Calls]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Send_Byte
+<BR>[Calls]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
+<LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Send_Byte
 <LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Wait_Ack
 <LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Stop
 <LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Start
-<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
 </UL>
-<BR>[Called By]<UL><LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AT24CXX_Write
+<BR>[Called By]<UL><LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TP_Save_Adjdata
+<LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AT24CXX_Write
 <LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AT24CXX_Check
 <LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AT24CXX_WriteLenByte
-<LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TP_Save_Adjdata
 </UL>
 
 <P><STRONG><a name="[119]"></a>AT24CXX_WriteLenByte</STRONG> (Thumb, 42 bytes, Stack size 24 bytes, 24cxx.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = AT24CXX_WriteLenByte &rArr; AT24CXX_WriteOneByte &rArr; IIC_Send_Byte
+<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = AT24CXX_WriteLenByte &rArr; AT24CXX_WriteOneByte &rArr; delay_ms
 </UL>
 <BR>[Calls]<UL><LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AT24CXX_WriteOneByte
 </UL>
@@ -917,8 +917,8 @@ Global Symbols
 <P><STRONG><a name="[120]"></a>CT_IIC_Start</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, ctiic.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = CT_IIC_Start &rArr; CT_Delay
 </UL>
-<BR>[Calls]<UL><LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CT_Delay
-<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_us
+<BR>[Calls]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_us
+<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CT_Delay
 </UL>
 <BR>[Called By]<UL><LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FT5206_RD_Reg
 <LI><a href="#[132]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FT5206_WR_Reg
@@ -931,16 +931,16 @@ Global Symbols
 <P><STRONG><a name="[121]"></a>CT_IIC_Stop</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, ctiic.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = CT_IIC_Stop &rArr; CT_Delay
 </UL>
-<BR>[Calls]<UL><LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CT_Delay
-<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_us
+<BR>[Calls]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_us
+<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CT_Delay
 </UL>
-<BR>[Called By]<UL><LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CT_IIC_Wait_Ack
-<LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FT5206_RD_Reg
+<BR>[Called By]<UL><LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FT5206_RD_Reg
 <LI><a href="#[132]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FT5206_WR_Reg
 <LI><a href="#[12d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OTT2001A_RD_Reg
 <LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OTT2001A_WR_Reg
 <LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GT9147_RD_Reg
 <LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GT9147_WR_Reg
+<LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CT_IIC_Wait_Ack
 </UL>
 
 <P><STRONG><a name="[122]"></a>CT_IIC_Wait_Ack</STRONG> (Thumb, 78 bytes, Stack size 8 bytes, ctiic.o(.text))
@@ -989,10 +989,10 @@ Global Symbols
 <P><STRONG><a name="[126]"></a>CT_IIC_Read_Byte</STRONG> (Thumb, 92 bytes, Stack size 16 bytes, ctiic.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = CT_IIC_Read_Byte &rArr; CT_IIC_NAck &rArr; CT_Delay
 </UL>
-<BR>[Calls]<UL><LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CT_IIC_NAck
+<BR>[Calls]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_us
+<LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CT_IIC_NAck
 <LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CT_IIC_Ack
 <LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CT_Delay
-<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_us
 </UL>
 <BR>[Called By]<UL><LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FT5206_RD_Reg
 <LI><a href="#[12d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OTT2001A_RD_Reg
@@ -1037,13 +1037,13 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 152 + Unknown Stack Size
 <LI>Call Chain = GT9147_Init &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CT_IIC_Init
-<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
+<BR>[Calls]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
 <LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHB1PeriphClockCmd
 <LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
 <LI><a href="#[129]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GT9147_RD_Reg
 <LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GT9147_Send_Cfg
 <LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GT9147_WR_Reg
+<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CT_IIC_Init
 <LI><a href="#[12b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
 <LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
@@ -1094,12 +1094,12 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 144 + Unknown Stack Size
 <LI>Call Chain = OTT2001A_Init &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CT_IIC_Init
-<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
+<BR>[Calls]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
 <LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHB1PeriphClockCmd
 <LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
 <LI><a href="#[12e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OTT2001A_SensorControl
 <LI><a href="#[12d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OTT2001A_RD_Reg
+<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CT_IIC_Init
 <LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TP_Init
@@ -1144,12 +1144,12 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 144 + Unknown Stack Size
 <LI>Call Chain = FT5206_Init &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CT_IIC_Init
-<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
+<BR>[Calls]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
 <LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHB1PeriphClockCmd
 <LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
 <LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FT5206_RD_Reg
 <LI><a href="#[132]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FT5206_WR_Reg
+<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CT_IIC_Init
 <LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TP_Init
@@ -1226,7 +1226,7 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> touch.o(.data)
 </UL>
 <P><STRONG><a name="[13c]"></a>TP_Save_Adjdata</STRONG> (Thumb, 166 bytes, Stack size 8 bytes, touch.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = TP_Save_Adjdata &rArr; AT24CXX_WriteLenByte &rArr; AT24CXX_WriteOneByte &rArr; IIC_Send_Byte
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = TP_Save_Adjdata &rArr; AT24CXX_WriteLenByte &rArr; AT24CXX_WriteOneByte &rArr; delay_ms
 </UL>
 <BR>[Calls]<UL><LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AT24CXX_WriteLenByte
 <LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AT24CXX_WriteOneByte
@@ -1280,8 +1280,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 280 + Unknown Stack Size
 <LI>Call Chain = TP_Init &rArr; TP_Adjust &rArr; TP_Adj_Info_Show &rArr; LCD_ShowNum &rArr; LCD_ShowChar &rArr; LCD_Fast_DrawPoint &rArr; LCD_WR_DATA
 </UL>
-<BR>[Calls]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AT24CXX_Init
-<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Clear
+<BR>[Calls]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Clear
 <LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_AHB1PeriphClockCmd
 <LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_Init
 <LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TP_Adjust
@@ -1291,6 +1290,7 @@ Global Symbols
 <LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FT5206_Init
 <LI><a href="#[12f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OTT2001A_Init
 <LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GT9147_Init
+<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AT24CXX_Init
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> touch.o(.data)
 </UL>
@@ -1339,7 +1339,11 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[e7]"></a>delay_us</STRONG> (Thumb, 72 bytes, Stack size 0 bytes, delay.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CT_IIC_Read_Byte
+<BR><BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ReadReg
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Init
+<LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TP_Read_AD
+<LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TP_Write_Byte
+<LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CT_IIC_Read_Byte
 <LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CT_IIC_Stop
 <LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CT_IIC_Start
 <LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CT_Delay
@@ -1350,10 +1354,6 @@ Global Symbols
 <LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Wait_Ack
 <LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Stop
 <LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Start
-<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ReadReg
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Init
-<LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TP_Read_AD
-<LI><a href="#[135]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TP_Write_Byte
 </UL>
 
 <P><STRONG><a name="[14a]"></a>delay_xms</STRONG> (Thumb, 72 bytes, Stack size 0 bytes, delay.o(.text))
@@ -1365,13 +1365,13 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_xms
 </UL>
-<BR>[Called By]<UL><LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AT24CXX_WriteOneByte
-<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY_Scan
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Init
+<BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Init
 <LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TP_Adjust
 <LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FT5206_Init
 <LI><a href="#[12f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OTT2001A_Init
 <LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GT9147_Init
+<LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AT24CXX_WriteOneByte
+<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY_Scan
 </UL>
 
 <P><STRONG><a name="[d3]"></a>_sys_exit</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, usart.o(.text))
@@ -1681,9 +1681,7 @@ Global Symbols
 <P><STRONG><a name="[e3]"></a>GPIO_Init</STRONG> (Thumb, 144 bytes, Stack size 20 bytes, stm32f4xx_gpio.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = GPIO_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CT_IIC_Init
-<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Init
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_init
+<BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_init
 <LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Init
 <LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Init
 <LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY_Init
@@ -1692,6 +1690,8 @@ Global Symbols
 <LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FT5206_Init
 <LI><a href="#[12f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OTT2001A_Init
 <LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GT9147_Init
+<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CT_IIC_Init
+<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Init
 </UL>
 
 <P><STRONG><a name="[43c]"></a>GPIO_StructInit</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f4xx_gpio.o(.text), UNUSED)
@@ -1847,9 +1847,7 @@ Global Symbols
 <P><STRONG><a name="[473]"></a>RCC_TIMCLKPresConfig</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f4xx_rcc.o(.text), UNUSED)
 
 <P><STRONG><a name="[e2]"></a>RCC_AHB1PeriphClockCmd</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, stm32f4xx_rcc.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CT_IIC_Init
-<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Init
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_init
+<BR><BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_init
 <LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Init
 <LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Init
 <LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY_Init
@@ -1858,6 +1856,8 @@ Global Symbols
 <LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FT5206_Init
 <LI><a href="#[12f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OTT2001A_Init
 <LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GT9147_Init
+<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CT_IIC_Init
+<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IIC_Init
 </UL>
 
 <P><STRONG><a name="[474]"></a>RCC_AHB2PeriphClockCmd</STRONG> (Thumb, 78 bytes, Stack size 0 bytes, stm32f4xx_rcc.o(.text), UNUSED)
@@ -2118,23 +2118,23 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[15a]"></a>TIM_ICInit</STRONG> (Thumb, 110 bytes, Stack size 16 bytes, stm32f4xx_tim.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TI1_Config
-<LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TI2_Config
-<LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TI3_Config
-<LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TI4_Config
-<LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_SetIC1Prescaler
+<BR><BR>[Calls]<UL><LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_SetIC1Prescaler
 <LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_SetIC2Prescaler
 <LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_SetIC3Prescaler
 <LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_SetIC4Prescaler
+<LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TI1_Config
+<LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TI2_Config
+<LI><a href="#[15f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TI3_Config
+<LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TI4_Config
 </UL>
 
 <P><STRONG><a name="[4c7]"></a>TIM_ICStructInit</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f4xx_tim.o(.text), UNUSED)
 
 <P><STRONG><a name="[163]"></a>TIM_PWMIConfig</STRONG> (Thumb, 124 bytes, Stack size 24 bytes, stm32f4xx_tim.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TI1_Config
-<LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TI2_Config
-<LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_SetIC1Prescaler
+<BR><BR>[Calls]<UL><LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_SetIC1Prescaler
 <LI><a href="#[15e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_SetIC2Prescaler
+<LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TI1_Config
+<LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TI2_Config
 </UL>
 
 <P><STRONG><a name="[4c8]"></a>TIM_GetCapture1</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f4xx_tim.o(.text), UNUSED)
@@ -2187,9 +2187,9 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[166]"></a>TIM_TIxExternalClockConfig</STRONG> (Thumb, 62 bytes, Stack size 24 bytes, stm32f4xx_tim.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TI1_Config
+<BR><BR>[Calls]<UL><LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_SelectInputTrigger
+<LI><a href="#[15b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TI1_Config
 <LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TI2_Config
-<LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_SelectInputTrigger
 </UL>
 
 <P><STRONG><a name="[168]"></a>TIM_ETRConfig</STRONG> (Thumb, 28 bytes, Stack size 12 bytes, stm32f4xx_tim.o(.text), UNUSED)
@@ -2362,11 +2362,11 @@ Global Symbols
 <LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_is_focused
 <LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_send_data
 <LI><a href="#[192]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_set_editing
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_design
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_signal
 <LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_scrl_design
 <LI><a href="#[363]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_add_btn
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_btn_signal
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_design
 </UL>
 
 <P><STRONG><a name="[192]"></a>lv_group_set_editing</STRONG> (Thumb, 92 bytes, Stack size 24 bytes, lv_group.o(.text))
@@ -2441,11 +2441,11 @@ Global Symbols
 <P><STRONG><a name="[1b7]"></a>lv_group_get_editing</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, lv_group.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[1b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_encoder_proc
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_signal
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_signal
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_signal
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_slider_signal
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_signal
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_signal
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_signal
 </UL>
 
 <P><STRONG><a name="[1aa]"></a>lv_group_get_click_focus</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, lv_group.o(.text))
@@ -2497,10 +2497,6 @@ Global Symbols
 <P><STRONG><a name="[1d7]"></a>lv_indev_get_act</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, lv_indev.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[1d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send_func
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_signal
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_signal
-<LI><a href="#[3d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_pressed_handler
-<LI><a href="#[3d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_pressing_handler
-<LI><a href="#[3d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_press_lost_handler
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_signal
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_slider_signal
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_scrollable_signal
@@ -2508,16 +2504,20 @@ Global Symbols
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_signal
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_signal
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_btn_signal
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_signal
+<LI><a href="#[3d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_pressed_handler
+<LI><a href="#[3d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_pressing_handler
+<LI><a href="#[3d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_press_lost_handler
 </UL>
 
 <P><STRONG><a name="[2ca]"></a>lv_indev_get_type</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, lv_indev.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_signal
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_signal
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_signal
 <LI><a href="#[3b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_cursor_position_on_click
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_slider_signal
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_signal
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_signal
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_signal
 </UL>
 
 <P><STRONG><a name="[1bd]"></a>lv_indev_reset_long_press</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, lv_indev.o(.text))
@@ -2542,11 +2542,11 @@ Global Symbols
 
 <P><STRONG><a name="[2cb]"></a>lv_indev_get_point</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, lv_indev.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_signal
+<LI><a href="#[3b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_cursor_position_on_click
+<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_slider_signal
 <LI><a href="#[3d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_pressed_handler
 <LI><a href="#[3d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_pressing_handler
 <LI><a href="#[3d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_press_lost_handler
-<LI><a href="#[3b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_cursor_position_on_click
-<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_slider_signal
 </UL>
 
 <P><STRONG><a name="[4ec]"></a>lv_indev_get_key</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, lv_indev.o(.text), UNUSED)
@@ -2560,9 +2560,9 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[391]"></a>lv_indev_get_vect</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, lv_indev.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[3d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_press_lost_handler
-<LI><a href="#[3b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_cursor_position_on_click
+<BR><BR>[Called By]<UL><LI><a href="#[3b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_cursor_position_on_click
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_scrollable_signal
+<LI><a href="#[3d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_press_lost_handler
 </UL>
 
 <P><STRONG><a name="[4ed]"></a>lv_indev_wait_release</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, lv_indev.o(.text), UNUSED)
@@ -2615,13 +2615,7 @@ Global Symbols
 <LI><a href="#[185]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;obj_to_foreground
 <LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_invalidate
 <LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_assign_screen
-<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
-<LI><a href="#[32e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_create
 <LI><a href="#[304]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_cont_refr_autofit
-<LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_create
-<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tab_btnm_event_cb
-<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_scrl_signal
-<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_signal
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_scrollable_signal
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_scrollable_design
 <LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_scrl_design
@@ -2632,6 +2626,12 @@ Global Symbols
 <LI><a href="#[370]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_get_btn_index
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_btn_signal
 <LI><a href="#[362]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_btn_single_select
+<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
+<LI><a href="#[32e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_create
+<LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_create
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tab_btnm_event_cb
+<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_scrl_signal
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_signal
 <LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;text_area_event_handler
 </UL>
 
@@ -2710,17 +2710,7 @@ Global Symbols
 <LI><a href="#[181]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_del
 <LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;focus_next_core
 <LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_load_scr
-<LI><a href="#[2a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_set_range
-<LI><a href="#[29e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_set_value
-<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_anim
 <LI><a href="#[270]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_drv_register
-<LI><a href="#[354]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_cut_text
-<LI><a href="#[353]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_ins_text
-<LI><a href="#[34e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_array_text
-<LI><a href="#[342]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_body_draw
-<LI><a href="#[33b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_refr_text
-<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_offset_x
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_offset_y
 <LI><a href="#[31c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_set_offset_y
 <LI><a href="#[31b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_set_offset_x
 <LI><a href="#[359]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_set_style
@@ -2741,11 +2731,21 @@ Global Symbols
 <LI><a href="#[2bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_set_style
 <LI><a href="#[2bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_set_map
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_signal
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_signal
+<LI><a href="#[2a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_set_range
+<LI><a href="#[29e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_set_value
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_anim
 <LI><a href="#[3a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_slider_set_knob_in
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_slider_signal
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;edge_flash_anim
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;edge_flash_anim_end
+<LI><a href="#[354]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_cut_text
+<LI><a href="#[353]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_ins_text
+<LI><a href="#[34e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_array_text
+<LI><a href="#[342]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_body_draw
+<LI><a href="#[33b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_refr_text
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_offset_x
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_offset_y
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_signal
 </UL>
 
 <P><STRONG><a name="[1a3]"></a>lv_obj_get_coords</STRONG> (Thumb, 18 bytes, Stack size 16 bytes, lv_obj.o(.text))
@@ -2758,8 +2758,6 @@ Global Symbols
 <LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_design
 <LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_pos
 <LI><a href="#[19e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_drag_throw
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_design
-<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_design
 <LI><a href="#[304]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_cont_refr_autofit
 <LI><a href="#[2f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_inv_cols
@@ -2771,6 +2769,8 @@ Global Symbols
 <LI><a href="#[3b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_cursor_position_on_click
 <LI><a href="#[39b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_on_edge
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_scrollable_signal
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_design
+<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
 </UL>
 
 <P><STRONG><a name="[1a6]"></a>lv_obj_set_pos</STRONG> (Thumb, 162 bytes, Stack size 32 bytes, lv_obj.o(.text))
@@ -2811,14 +2811,14 @@ Global Symbols
 <LI><a href="#[1bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_parent
 <LI><a href="#[1ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_drag
 <LI><a href="#[19e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_drag_throw
-<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
-<LI><a href="#[3d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_set_tab_act
 <LI><a href="#[38c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_scroll_ver
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_scrollable_signal
 <LI><a href="#[389]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_sb_refresh
 <LI><a href="#[360]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_focus
 <LI><a href="#[375]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_down
 <LI><a href="#[374]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_up
+<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
+<LI><a href="#[3d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_set_tab_act
 <LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;text_area_event_handler
 <LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;keyboard_event_cb
 </UL>
@@ -2835,13 +2835,13 @@ Global Symbols
 <LI><a href="#[1bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_parent
 <LI><a href="#[1ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_drag
 <LI><a href="#[19e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_drag_throw
-<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
-<LI><a href="#[3d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_set_tab_act
-<LI><a href="#[3d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_pressing_handler
 <LI><a href="#[38b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_scroll_hor
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_scrollable_signal
 <LI><a href="#[389]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_sb_refresh
 <LI><a href="#[360]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_focus
+<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
+<LI><a href="#[3d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_set_tab_act
+<LI><a href="#[3d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_pressing_handler
 </UL>
 
 <P><STRONG><a name="[1cc]"></a>lv_obj_get_opa_scale</STRONG> (Thumb, 40 bytes, Stack size 4 bytes, lv_obj.o(.text))
@@ -2851,8 +2851,6 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[200]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_refr_get_top_obj
 <LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_design
-<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_design
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_design
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_design
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_design
 <LI><a href="#[2e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_draw_div
@@ -2864,9 +2862,11 @@ Global Symbols
 <LI><a href="#[2dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_draw_y_ticks
 <LI><a href="#[2dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_draw_x_ticks
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_design
+<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_design
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_scrollable_design
 <LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_slider_design
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_design
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_design
 </UL>
 
 <P><STRONG><a name="[1a9]"></a>lv_obj_get_group</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, lv_obj.o(.text))
@@ -2874,9 +2874,7 @@ Global Symbols
 <LI><a href="#[1cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_style
 <LI><a href="#[1d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delete_children
 <LI><a href="#[1a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_proc_release
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_design
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_signal
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_signal
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_signal
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_slider_signal
 <LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_scrl_design
@@ -2884,6 +2882,8 @@ Global Symbols
 <LI><a href="#[363]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_add_btn
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_signal
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_btn_signal
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_design
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_signal
 </UL>
 
 <P><STRONG><a name="[1cd]"></a>lv_obj_get_style</STRONG> (Thumb, 108 bytes, Stack size 24 bytes, lv_obj.o(.text))
@@ -2899,14 +2899,6 @@ Global Symbols
 <LI><a href="#[1f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_inner_coords
 <LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_signal
 <LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_design
-<LI><a href="#[2a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_get_style
-<LI><a href="#[352]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_is_char_under_pos
-<LI><a href="#[351]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_letter_pos
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_design
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_signal
-<LI><a href="#[33b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_refr_text
-<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
-<LI><a href="#[329]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_del_char
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_design
 <LI><a href="#[373]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_get_style
 <LI><a href="#[339]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_letter_on
@@ -2924,10 +2916,7 @@ Global Symbols
 <LI><a href="#[2b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_get_style
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_design
 <LI><a href="#[2b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btn_get_style
-<LI><a href="#[3da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_add_tab
-<LI><a href="#[3d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_get_style
-<LI><a href="#[3d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_set_tab_act
-<LI><a href="#[3d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_pressing_handler
+<LI><a href="#[2a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_get_style
 <LI><a href="#[3bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_cursor_up
 <LI><a href="#[3bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_cursor_down
 <LI><a href="#[3aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_get_style
@@ -2943,17 +2932,28 @@ Global Symbols
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_scrollable_signal
 <LI><a href="#[389]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_sb_refresh
 <LI><a href="#[378]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_get_style
+<LI><a href="#[352]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_is_char_under_pos
+<LI><a href="#[351]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_letter_pos
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_design
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_signal
+<LI><a href="#[33b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_refr_text
+<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
+<LI><a href="#[329]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_del_char
+<LI><a href="#[3da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_add_tab
+<LI><a href="#[3d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_get_style
+<LI><a href="#[3d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_set_tab_act
+<LI><a href="#[3d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_pressing_handler
 </UL>
 
 <P><STRONG><a name="[1d5]"></a>lv_obj_set_design_cb</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, lv_obj.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[1d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_create
-<LI><a href="#[2a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_create
 <LI><a href="#[369]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_create
 <LI><a href="#[2e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_create
 <LI><a href="#[34d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_create
 <LI><a href="#[319]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_create
 <LI><a href="#[2cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_create
 <LI><a href="#[2b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btn_create
+<LI><a href="#[2a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_create
 <LI><a href="#[3be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_create
 <LI><a href="#[3a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_slider_create
 </UL>
@@ -2964,13 +2964,13 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_invalidate
 </UL>
 <BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_signal
-<LI><a href="#[29f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_set_style
-<LI><a href="#[342]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_body_draw
 <LI><a href="#[359]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_set_style
 <LI><a href="#[2fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_set_margin
+<LI><a href="#[29f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_set_style
 <LI><a href="#[3ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_style
 <LI><a href="#[39d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_slider_set_style
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_signal
+<LI><a href="#[342]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_body_draw
 </UL>
 
 <P><STRONG><a name="[1a8]"></a>lv_obj_is_protected</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, lv_obj.o(.text))
@@ -2987,8 +2987,6 @@ Global Symbols
 
 <P><STRONG><a name="[1d4]"></a>lv_obj_set_signal_cb</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, lv_obj.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[1d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_create
-<LI><a href="#[2a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_create
-<LI><a href="#[32e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_create
 <LI><a href="#[369]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_create
 <LI><a href="#[2e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_create
 <LI><a href="#[34d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_create
@@ -2996,13 +2994,15 @@ Global Symbols
 <LI><a href="#[2cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_create
 <LI><a href="#[2b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_cont_create
 <LI><a href="#[2b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btn_create
-<LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_create
-<LI><a href="#[3da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_add_tab
+<LI><a href="#[2a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_create
 <LI><a href="#[3be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_create
 <LI><a href="#[3a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_slider_create
 <LI><a href="#[37e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_create
 <LI><a href="#[368]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_create
 <LI><a href="#[363]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_add_btn
+<LI><a href="#[32e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_create
+<LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_create
+<LI><a href="#[3da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_add_tab
 </UL>
 
 <P><STRONG><a name="[1d1]"></a>lv_obj_create</STRONG> (Thumb, 740 bytes, Stack size 24 bytes, lv_obj.o(.text))
@@ -3025,13 +3025,13 @@ Global Symbols
 <LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_parent
 <LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_default
 </UL>
-<BR>[Called By]<UL><LI><a href="#[2a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_create
-<LI><a href="#[270]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_drv_register
+<BR>[Called By]<UL><LI><a href="#[270]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_drv_register
 <LI><a href="#[2e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_create
 <LI><a href="#[34d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_create
 <LI><a href="#[319]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_create
 <LI><a href="#[2cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_create
 <LI><a href="#[2b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_cont_create
+<LI><a href="#[2a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_create
 <LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_create
 </UL>
 
@@ -3063,21 +3063,21 @@ Global Symbols
 <LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_focus_obj
 <LI><a href="#[192]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_set_editing
 <LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;focus_next_core
-<LI><a href="#[329]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_del_char
-<LI><a href="#[32d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_text
-<LI><a href="#[326]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_char
-<LI><a href="#[325]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_def_event_cb
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_signal
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btn_signal
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_signal
-<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tab_btnm_event_cb
-<LI><a href="#[3d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_press_lost_handler
 <LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_text
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_slider_signal
 <LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scrl_def_event_cb
 <LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_btnm_event_cb
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_signal
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_signal
+<LI><a href="#[329]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_del_char
+<LI><a href="#[32d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_text
+<LI><a href="#[326]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_char
+<LI><a href="#[325]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_def_event_cb
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_signal
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tab_btnm_event_cb
+<LI><a href="#[3d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_press_lost_handler
 </UL>
 
 <P><STRONG><a name="[1dc]"></a>lv_obj_del</STRONG> (Thumb, 240 bytes, Stack size 32 bytes, lv_obj.o(.text))
@@ -3103,9 +3103,9 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_clean
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_del_async_cb
-<LI><a href="#[325]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_def_event_cb
 <LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_close_ready_cb
 <LI><a href="#[36d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_remove
+<LI><a href="#[325]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_def_event_cb
 <LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;kb_hide_anim_end
 </UL>
 
@@ -3123,20 +3123,20 @@ Global Symbols
 <LI><a href="#[1e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;refresh_children_style
 <LI><a href="#[30f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_cont_refr_layout
 <LI><a href="#[307]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_cont_layout_grid
-<LI><a href="#[3d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabview_realign
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_signal
 <LI><a href="#[367]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_get_btn_img
 <LI><a href="#[35c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_get_btn_label
 <LI><a href="#[356]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_get_prev_btn
+<LI><a href="#[3d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabview_realign
 </UL>
 
 <P><STRONG><a name="[1e0]"></a>lv_obj_clean</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, lv_obj.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[1df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_child
 <LI><a href="#[1dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_del
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_clean
-<LI><a href="#[393]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_clean
+<BR>[Called By]<UL><LI><a href="#[393]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_clean
 <LI><a href="#[36c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_clean
+<LI><a href="#[3dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_clean
 </UL>
 
 <P><STRONG><a name="[1bf]"></a>lv_obj_set_parent</STRONG> (Thumb, 104 bytes, Stack size 24 bytes, lv_obj.o(.text))
@@ -3180,12 +3180,12 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_drag
 <LI><a href="#[19e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_drag_throw
+<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_scrollable_signal
+<LI><a href="#[360]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_focus
 <LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
 <LI><a href="#[3da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_add_tab
 <LI><a href="#[3d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_set_tab_act
 <LI><a href="#[3d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_pressing_handler
-<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_scrollable_signal
-<LI><a href="#[360]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_focus
 </UL>
 <BR>[Address Reference Count : 3]<UL><LI> lv_page.o(.text)
 <LI> lv_label.o(.text)
@@ -3199,18 +3199,18 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_drag
 <LI><a href="#[19e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_drag_throw
-<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
-<LI><a href="#[3da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_add_tab
-<LI><a href="#[3d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_set_tab_act
-<LI><a href="#[3d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_pressing_handler
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_scrollable_signal
 <LI><a href="#[360]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_focus
 <LI><a href="#[375]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_down
 <LI><a href="#[374]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_up
+<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
+<LI><a href="#[3da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_add_tab
+<LI><a href="#[3d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_set_tab_act
+<LI><a href="#[3d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_pressing_handler
 </UL>
 <BR>[Address Reference Count : 5]<UL><LI> lv_page.o(.text)
-<LI> lv_label.o(.text)
 <LI> lv_list.o(.text)
+<LI> lv_label.o(.text)
 <LI> lv_tabview.o(.text)
 <LI> demo.o(.text)
 </UL>
@@ -3221,9 +3221,6 @@ Global Symbols
 <LI><a href="#[1e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_align_origo
 <LI><a href="#[1e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_align
 <LI><a href="#[1ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_drag
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_design
-<LI><a href="#[33b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_refr_text
-<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
 <LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_cont_signal
 <LI><a href="#[30e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_cont_layout_center
 <LI><a href="#[30d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_cont_layout_col
@@ -3239,12 +3236,6 @@ Global Symbols
 <LI><a href="#[2dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_draw_x_ticks
 <LI><a href="#[319]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_create
 <LI><a href="#[2bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_set_map
-<LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_create
-<LI><a href="#[3da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_add_tab
-<LI><a href="#[3d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_set_tab_act
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_signal
-<LI><a href="#[3d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabview_realign
-<LI><a href="#[3d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_pressing_handler
 <LI><a href="#[3bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_cursor_down
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_signal
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_scrollable_signal
@@ -3256,6 +3247,15 @@ Global Symbols
 <LI><a href="#[37c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_start_auto_close
 <LI><a href="#[360]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_focus
 <LI><a href="#[374]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_up
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_design
+<LI><a href="#[33b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_refr_text
+<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
+<LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_create
+<LI><a href="#[3da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_add_tab
+<LI><a href="#[3d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_set_tab_act
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_signal
+<LI><a href="#[3d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabview_realign
+<LI><a href="#[3d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_pressing_handler
 <LI><a href="#[3ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_create
 <LI><a href="#[3eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;list_create
 <LI><a href="#[3ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chart_create
@@ -3268,12 +3268,6 @@ Global Symbols
 <LI><a href="#[1e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_align_origo
 <LI><a href="#[1e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_align
 <LI><a href="#[1ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;indev_drag
-<LI><a href="#[352]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_is_char_under_pos
-<LI><a href="#[351]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_letter_pos
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_design
-<LI><a href="#[33b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_refr_text
-<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
-<LI><a href="#[329]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_del_char
 <LI><a href="#[339]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_letter_on
 <LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_cont_signal
 <LI><a href="#[30c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_cont_layout_row
@@ -3292,12 +3286,6 @@ Global Symbols
 <LI><a href="#[2dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_draw_x_ticks
 <LI><a href="#[319]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_create
 <LI><a href="#[2bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_set_map
-<LI><a href="#[3da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_add_tab
-<LI><a href="#[3d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_set_tab_act
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_signal
-<LI><a href="#[3d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabview_realign
-<LI><a href="#[3d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_pressing_handler
-<LI><a href="#[3d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_press_lost_handler
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_signal
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_scrollable_signal
 <LI><a href="#[3b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_cursor_position_on_click
@@ -3312,6 +3300,18 @@ Global Symbols
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_signal
 <LI><a href="#[379]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbox_realign
 <LI><a href="#[360]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_focus
+<LI><a href="#[352]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_is_char_under_pos
+<LI><a href="#[351]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_letter_pos
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_design
+<LI><a href="#[33b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_refr_text
+<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
+<LI><a href="#[329]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_del_char
+<LI><a href="#[3da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_add_tab
+<LI><a href="#[3d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_set_tab_act
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_signal
+<LI><a href="#[3d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabview_realign
+<LI><a href="#[3d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_pressing_handler
+<LI><a href="#[3d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_press_lost_handler
 <LI><a href="#[3ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_create
 <LI><a href="#[3ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chart_create
 </UL>
@@ -3327,14 +3327,14 @@ Global Symbols
 <LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_parent
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_realign
-<LI><a href="#[32e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_create
 <LI><a href="#[30e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_cont_layout_center
 <LI><a href="#[30d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_cont_layout_col
 <LI><a href="#[30c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_cont_layout_row
 <LI><a href="#[30a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_cont_layout_pretty
+<LI><a href="#[37e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_create
+<LI><a href="#[32e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_create
 <LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_create
 <LI><a href="#[3d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabview_realign
-<LI><a href="#[37e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_create
 <LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;text_area_event_handler
 <LI><a href="#[3eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;list_create
 <LI><a href="#[3ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chart_create
@@ -3378,19 +3378,19 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;demo_create
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_height
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_width
-<LI><a href="#[2a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_create
 <LI><a href="#[273]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_drv_update
-<LI><a href="#[33b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_refr_text
-<LI><a href="#[32e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_create
 <LI><a href="#[2e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_create
 <LI><a href="#[317]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_set_src
 <LI><a href="#[2cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_create
-<LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_create
-<LI><a href="#[3da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_add_tab
-<LI><a href="#[3d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabview_realign
+<LI><a href="#[2a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_create
 <LI><a href="#[3be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_create
 <LI><a href="#[379]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbox_realign
 <LI><a href="#[368]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_create
+<LI><a href="#[33b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_refr_text
+<LI><a href="#[32e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_create
+<LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_create
+<LI><a href="#[3da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_add_tab
+<LI><a href="#[3d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabview_realign
 <LI><a href="#[3ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_create
 <LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;text_area_event_handler
 <LI><a href="#[3ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chart_create
@@ -3403,11 +3403,6 @@ Global Symbols
 <LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_height
 </UL>
 <BR>[Called By]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;demo_create
-<LI><a href="#[329]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_del_char
-<LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_create
-<LI><a href="#[3db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_set_style
-<LI><a href="#[3da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_add_tab
-<LI><a href="#[3d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabview_realign
 <LI><a href="#[3c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_text_align
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_signal
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_scrollable_signal
@@ -3416,6 +3411,11 @@ Global Symbols
 <LI><a href="#[37e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_create
 <LI><a href="#[379]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mbox_realign
 <LI><a href="#[363]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_add_btn
+<LI><a href="#[329]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_del_char
+<LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_create
+<LI><a href="#[3db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_set_style
+<LI><a href="#[3da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_add_tab
+<LI><a href="#[3d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabview_realign
 <LI><a href="#[3eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;list_create
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> lv_mbox.o(.text)
@@ -3426,13 +3426,13 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[1e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_size
 <LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_width
 </UL>
-<BR>[Called By]<UL><LI><a href="#[33b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_refr_text
+<BR>[Called By]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_signal
+<LI><a href="#[3b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_one_line
+<LI><a href="#[33b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_refr_text
 <LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_create
 <LI><a href="#[3db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_set_style
 <LI><a href="#[3da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_add_tab
 <LI><a href="#[3d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabview_realign
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_signal
-<LI><a href="#[3b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_one_line
 <LI><a href="#[3eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;list_create
 <LI><a href="#[3ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chart_create
 </UL>
@@ -3451,19 +3451,19 @@ Global Symbols
 <LI><a href="#[1e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_style
 <LI><a href="#[1e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;report_style_mod_core
 <LI><a href="#[1e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;refresh_children_style
-<LI><a href="#[2a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_create
-<LI><a href="#[32e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_create
 <LI><a href="#[369]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_create
 <LI><a href="#[2e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_create
 <LI><a href="#[34d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_create
 <LI><a href="#[319]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_create
 <LI><a href="#[2b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_cont_create
 <LI><a href="#[2b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btn_create
-<LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_create
+<LI><a href="#[2a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_create
 <LI><a href="#[3be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_create
 <LI><a href="#[3a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_slider_create
 <LI><a href="#[37e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_create
 <LI><a href="#[368]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_create
+<LI><a href="#[32e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_create
+<LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_create
 </UL>
 
 <P><STRONG><a name="[1e8]"></a>lv_obj_set_style</STRONG> (Thumb, 22 bytes, Stack size 16 bytes, lv_obj.o(.text))
@@ -3472,9 +3472,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[1e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_refresh_style
 <LI><a href="#[1e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;refresh_children_style
 </UL>
-<BR>[Called By]<UL><LI><a href="#[2a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_create
-<LI><a href="#[29f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_set_style
-<LI><a href="#[270]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_drv_register
+<BR>[Called By]<UL><LI><a href="#[270]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_drv_register
 <LI><a href="#[359]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_set_style
 <LI><a href="#[310]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_cont_set_style
 <LI><a href="#[2e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_set_style
@@ -3485,11 +3483,13 @@ Global Symbols
 <LI><a href="#[2b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btn_create
 <LI><a href="#[2ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btn_set_state
 <LI><a href="#[2ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btn_set_style
-<LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_create
-<LI><a href="#[3db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_set_style
+<LI><a href="#[2a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_create
+<LI><a href="#[29f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_set_style
 <LI><a href="#[3ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_style
 <LI><a href="#[37a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_set_style
 <LI><a href="#[363]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_add_btn
+<LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_create
+<LI><a href="#[3db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_set_style
 <LI><a href="#[3ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chart_create
 </UL>
 
@@ -3512,20 +3512,20 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_invalidate
 <LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_parent
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabview_realign
-<LI><a href="#[3af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;placeholder_update
+<BR>[Called By]<UL><LI><a href="#[3af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;placeholder_update
+<LI><a href="#[3d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabview_realign
 </UL>
 
 <P><STRONG><a name="[1ed]"></a>lv_obj_set_click</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, lv_obj.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[1ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_drag
-<LI><a href="#[2a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_create
 <LI><a href="#[34d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_create
 <LI><a href="#[319]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_create
 <LI><a href="#[2b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btn_create
-<LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_create
+<LI><a href="#[2a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_create
 <LI><a href="#[3be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_create
 <LI><a href="#[3a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_slider_create
 <LI><a href="#[363]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_add_btn
+<LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_create
 </UL>
 
 <P><STRONG><a name="[4f1]"></a>lv_obj_set_top</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, lv_obj.o(.text), UNUSED)
@@ -3537,9 +3537,9 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_drag_dir
 <LI><a href="#[369]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_create
+<LI><a href="#[364]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_glue_obj
 <LI><a href="#[3d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_pressing_handler
 <LI><a href="#[3d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_press_lost_handler
-<LI><a href="#[364]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_glue_obj
 </UL>
 
 <P><STRONG><a name="[1ee]"></a>lv_obj_set_drag_dir</STRONG> (Thumb, 36 bytes, Stack size 12 bytes, lv_obj.o(.text), UNUSED)
@@ -3583,11 +3583,11 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[32f]"></a>lv_obj_set_event_cb</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, lv_obj.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[32e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_create
-<LI><a href="#[369]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_create
-<LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_create
+<BR><BR>[Called By]<UL><LI><a href="#[369]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_create
 <LI><a href="#[380]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_add_btns
 <LI><a href="#[37e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_create
+<LI><a href="#[32e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_create
+<LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_create
 <LI><a href="#[3ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_create
 <LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;text_area_event_handler
 <LI><a href="#[3eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;list_create
@@ -3595,9 +3595,9 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[37f]"></a>lv_event_get_data</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, lv_obj.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_signal
-<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scrl_def_event_cb
+<BR><BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scrl_def_event_cb
 <LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_btnm_event_cb
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_signal
 </UL>
 
 <P><STRONG><a name="[4f4]"></a>lv_signal_send</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, lv_obj.o(.text), UNUSED)
@@ -3608,20 +3608,20 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_realloc
 </UL>
-<BR>[Called By]<UL><LI><a href="#[2a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_create
-<LI><a href="#[32e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_create
-<LI><a href="#[369]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_create
+<BR>[Called By]<UL><LI><a href="#[369]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_create
 <LI><a href="#[2e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_create
 <LI><a href="#[34d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_create
 <LI><a href="#[319]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_create
 <LI><a href="#[2cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_create
 <LI><a href="#[2b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_cont_create
 <LI><a href="#[2b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btn_create
-<LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_create
+<LI><a href="#[2a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_create
 <LI><a href="#[3be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_create
 <LI><a href="#[3a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_slider_create
 <LI><a href="#[37e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_create
 <LI><a href="#[368]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_create
+<LI><a href="#[32e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_create
+<LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_create
 </UL>
 
 <P><STRONG><a name="[1f2]"></a>lv_obj_get_child_back</STRONG> (Thumb, 34 bytes, Stack size 16 bytes, lv_obj.o(.text))
@@ -3630,8 +3630,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ll_get_tail
 <LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ll_get_prev
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_get_tab
-<LI><a href="#[35a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_get_next_btn
+<BR>[Called By]<UL><LI><a href="#[35a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_get_next_btn
+<LI><a href="#[3cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_get_tab
 </UL>
 
 <P><STRONG><a name="[1f3]"></a>lv_obj_count_children</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, lv_obj.o(.text), UNUSED)
@@ -3720,31 +3720,31 @@ Global Symbols
 <P><STRONG><a name="[4fd]"></a>lv_obj_get_protect</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, lv_obj.o(.text), UNUSED)
 
 <P><STRONG><a name="[2a2]"></a>lv_obj_get_signal_cb</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, lv_obj.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[2a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_create
-<LI><a href="#[32e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_create
-<LI><a href="#[369]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_create
+<BR><BR>[Called By]<UL><LI><a href="#[369]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_create
 <LI><a href="#[2e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_create
 <LI><a href="#[34d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_create
 <LI><a href="#[319]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_create
 <LI><a href="#[2cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_create
 <LI><a href="#[2b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_cont_create
 <LI><a href="#[2b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btn_create
-<LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_create
-<LI><a href="#[3da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_add_tab
-<LI><a href="#[3d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabview_realign
+<LI><a href="#[2a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_create
 <LI><a href="#[3be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_create
 <LI><a href="#[3a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_slider_create
 <LI><a href="#[37e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_create
 <LI><a href="#[368]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_create
 <LI><a href="#[363]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_add_btn
+<LI><a href="#[32e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_create
+<LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_create
+<LI><a href="#[3da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_add_tab
+<LI><a href="#[3d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabview_realign
 </UL>
 
 <P><STRONG><a name="[2a3]"></a>lv_obj_get_design_cb</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, lv_obj.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[2a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_create
-<LI><a href="#[369]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_create
+<BR><BR>[Called By]<UL><LI><a href="#[369]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_create
 <LI><a href="#[2e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_create
 <LI><a href="#[2cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_create
 <LI><a href="#[2b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btn_create
+<LI><a href="#[2a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_create
 <LI><a href="#[3be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_create
 <LI><a href="#[3a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_slider_create
 </UL>
@@ -3752,61 +3752,7 @@ Global Symbols
 <P><STRONG><a name="[4fe]"></a>lv_obj_get_event_cb</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, lv_obj.o(.text), UNUSED)
 
 <P><STRONG><a name="[29d]"></a>lv_obj_get_ext_attr</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, lv_obj.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[2ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_get_anim_time
-<LI><a href="#[2aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_get_sym
-<LI><a href="#[2a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_get_max_value
-<LI><a href="#[2a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_get_min_value
-<LI><a href="#[2a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_get_value
-<LI><a href="#[2a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_set_anim_time
-<LI><a href="#[2a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_set_sym
-<LI><a href="#[2a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_set_range
-<LI><a href="#[2a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_create
-<LI><a href="#[2a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_get_style
-<LI><a href="#[29f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_set_style
-<LI><a href="#[29e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_set_value
-<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_design
-<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_anim
-<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_anim_ready
-<LI><a href="#[354]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_cut_text
-<LI><a href="#[353]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_ins_text
-<LI><a href="#[352]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_is_char_under_pos
-<LI><a href="#[351]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_letter_pos
-<LI><a href="#[350]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_anim_speed
-<LI><a href="#[34f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_anim_speed
-<LI><a href="#[34e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_array_text
-<LI><a href="#[348]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_long_mode
-<LI><a href="#[345]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_long_mode
-<LI><a href="#[344]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_recolor
-<LI><a href="#[343]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_recolor
-<LI><a href="#[342]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_body_draw
-<LI><a href="#[341]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_body_draw
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_design
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_signal
-<LI><a href="#[347]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_revert_dots
-<LI><a href="#[346]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_dot_tmp
-<LI><a href="#[33b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_refr_text
-<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_offset_x
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_offset_y
-<LI><a href="#[337]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_dot_tmp
-<LI><a href="#[336]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_dot_tmp_free
-<LI><a href="#[324]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_type
-<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
-<LI><a href="#[32b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_get_text
-<LI><a href="#[323]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_get_cursor_type
-<LI><a href="#[32a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_get_cursor_pos
-<LI><a href="#[329]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_del_char
-<LI><a href="#[32d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_text
-<LI><a href="#[326]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_char
-<LI><a href="#[334]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_get_cursor_manage
-<LI><a href="#[333]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_get_mode
-<LI><a href="#[332]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_get_ta
-<LI><a href="#[331]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_set_cursor_manage
-<LI><a href="#[330]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_set_mode
-<LI><a href="#[32e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_create
-<LI><a href="#[325]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_def_event_cb
-<LI><a href="#[322]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_set_ta
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_signal
-<LI><a href="#[320]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_get_offset_y
+<BR><BR>[Called By]<UL><LI><a href="#[320]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_get_offset_y
 <LI><a href="#[31f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_get_offset_x
 <LI><a href="#[31e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_get_file_name
 <LI><a href="#[31d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_get_src
@@ -3914,27 +3860,21 @@ Global Symbols
 <LI><a href="#[2ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btn_set_state
 <LI><a href="#[2ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btn_set_style
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btn_signal
-<LI><a href="#[3e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_get_btns_hidden
-<LI><a href="#[3e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_get_btns_pos
-<LI><a href="#[3e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_get_tab_count
-<LI><a href="#[3e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_set_btns_hidden
-<LI><a href="#[3e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_set_btns_pos
-<LI><a href="#[3df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_set_anim_time
-<LI><a href="#[3de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_set_sliding
-<LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_create
-<LI><a href="#[3db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_set_style
-<LI><a href="#[3da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_add_tab
-<LI><a href="#[3d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_get_style
-<LI><a href="#[3d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_get_sliding
-<LI><a href="#[3d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_get_tab_act
-<LI><a href="#[3d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_set_tab_act
-<LI><a href="#[3d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_get_anim_time
-<LI><a href="#[3cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_get_tab
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_signal
-<LI><a href="#[3d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabview_realign
-<LI><a href="#[3d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_pressed_handler
-<LI><a href="#[3d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_pressing_handler
-<LI><a href="#[3d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_press_lost_handler
+<LI><a href="#[2ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_get_anim_time
+<LI><a href="#[2aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_get_sym
+<LI><a href="#[2a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_get_max_value
+<LI><a href="#[2a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_get_min_value
+<LI><a href="#[2a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_get_value
+<LI><a href="#[2a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_set_anim_time
+<LI><a href="#[2a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_set_sym
+<LI><a href="#[2a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_set_range
+<LI><a href="#[2a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_create
+<LI><a href="#[2a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_get_style
+<LI><a href="#[29f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_set_style
+<LI><a href="#[29e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_set_value
+<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_design
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_anim
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_anim_ready
 <LI><a href="#[3ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_get_cursor_blink_time
 <LI><a href="#[3cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_get_pwd_show_time
 <LI><a href="#[3cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_get_one_line
@@ -4019,6 +3959,66 @@ Global Symbols
 <LI><a href="#[358]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_set_style
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_signal
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_btn_signal
+<LI><a href="#[354]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_cut_text
+<LI><a href="#[353]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_ins_text
+<LI><a href="#[352]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_is_char_under_pos
+<LI><a href="#[351]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_letter_pos
+<LI><a href="#[350]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_anim_speed
+<LI><a href="#[34f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_anim_speed
+<LI><a href="#[34e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_array_text
+<LI><a href="#[348]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_long_mode
+<LI><a href="#[345]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_long_mode
+<LI><a href="#[344]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_recolor
+<LI><a href="#[343]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_recolor
+<LI><a href="#[342]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_body_draw
+<LI><a href="#[341]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_body_draw
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_design
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_signal
+<LI><a href="#[347]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_revert_dots
+<LI><a href="#[346]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_dot_tmp
+<LI><a href="#[33b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_refr_text
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_offset_x
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_offset_y
+<LI><a href="#[337]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_dot_tmp
+<LI><a href="#[336]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_dot_tmp_free
+<LI><a href="#[324]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_type
+<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
+<LI><a href="#[32b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_get_text
+<LI><a href="#[323]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_get_cursor_type
+<LI><a href="#[32a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_get_cursor_pos
+<LI><a href="#[329]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_del_char
+<LI><a href="#[32d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_text
+<LI><a href="#[326]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_char
+<LI><a href="#[334]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_get_cursor_manage
+<LI><a href="#[333]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_get_mode
+<LI><a href="#[332]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_get_ta
+<LI><a href="#[331]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_set_cursor_manage
+<LI><a href="#[330]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_set_mode
+<LI><a href="#[32e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_create
+<LI><a href="#[325]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_def_event_cb
+<LI><a href="#[322]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_set_ta
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_signal
+<LI><a href="#[3e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_get_btns_hidden
+<LI><a href="#[3e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_get_btns_pos
+<LI><a href="#[3e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_get_tab_count
+<LI><a href="#[3e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_set_btns_hidden
+<LI><a href="#[3e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_set_btns_pos
+<LI><a href="#[3df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_set_anim_time
+<LI><a href="#[3de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_set_sliding
+<LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_create
+<LI><a href="#[3db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_set_style
+<LI><a href="#[3da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_add_tab
+<LI><a href="#[3d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_get_style
+<LI><a href="#[3d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_get_sliding
+<LI><a href="#[3d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_get_tab_act
+<LI><a href="#[3d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_set_tab_act
+<LI><a href="#[3d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_get_anim_time
+<LI><a href="#[3cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_get_tab
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_signal
+<LI><a href="#[3d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabview_realign
+<LI><a href="#[3d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_pressed_handler
+<LI><a href="#[3d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_pressing_handler
+<LI><a href="#[3d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_press_lost_handler
 </UL>
 
 <P><STRONG><a name="[1f8]"></a>lv_obj_get_type</STRONG> (Thumb, 88 bytes, Stack size 56 bytes, lv_obj.o(.text))
@@ -4046,10 +4046,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[1fd]"></a>lv_refr_get_disp_refreshing</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, lv_refr.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[21f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sw_color_fill
-<LI><a href="#[220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_fill
-<LI><a href="#[21b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_px
-<LI><a href="#[1fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_refr_vdb_flush
+<BR><BR>[Called By]<UL><LI><a href="#[1fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_refr_vdb_flush
 <LI><a href="#[252]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_shadow_full
 <LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_shadow_full_straight
 <LI><a href="#[250]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_shadow_bottom
@@ -4062,6 +4059,9 @@ Global Symbols
 <LI><a href="#[23d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;line_draw_skew
 <LI><a href="#[225]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_map
 <LI><a href="#[221]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_letter
+<LI><a href="#[21f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sw_color_fill
+<LI><a href="#[220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_fill
+<LI><a href="#[21b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_px
 </UL>
 
 <P><STRONG><a name="[7f]"></a>lv_disp_refr_task</STRONG> (Thumb, 344 bytes, Stack size 48 bytes, lv_refr.o(.text))
@@ -4124,7 +4124,6 @@ Global Symbols
 <LI><a href="#[1c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_style_init
 <LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_mod_style
 <LI><a href="#[22a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_label
-<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_design
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_design
 <LI><a href="#[2e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_draw_cols
 <LI><a href="#[2e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_draw_points
@@ -4132,6 +4131,7 @@ Global Symbols
 <LI><a href="#[2e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_draw_lines
 <LI><a href="#[2df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_draw_areas
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_design
+<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_design
 <LI><a href="#[3ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_cursor_style
 <LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_slider_design
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_design
@@ -4192,10 +4192,10 @@ Global Symbols
 <P><STRONG><a name="[21a]"></a>lv_draw_aa_get_opa</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, lv_draw.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = lv_draw_aa_get_opa
 </UL>
-<BR>[Called By]<UL><LI><a href="#[21c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_aa_hor_seg
-<LI><a href="#[219]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_aa_ver_seg
-<LI><a href="#[24b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_rect_main_corner
+<BR>[Called By]<UL><LI><a href="#[24b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_rect_main_corner
 <LI><a href="#[244]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_rect_border_corner
+<LI><a href="#[21c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_aa_hor_seg
+<LI><a href="#[219]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_aa_ver_seg
 </UL>
 
 <P><STRONG><a name="[219]"></a>lv_draw_aa_ver_seg</STRONG> (Thumb, 92 bytes, Stack size 40 bytes, lv_draw.o(.text))
@@ -4219,28 +4219,28 @@ Global Symbols
 <P><STRONG><a name="[21b]"></a>lv_draw_px</STRONG> (Thumb, 214 bytes, Stack size 64 bytes, lv_draw_basic.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 84<LI>Call Chain = lv_draw_px &rArr; lv_color_mix
 </UL>
-<BR>[Calls]<UL><LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_get_width
-<LI><a href="#[21e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_color_mix
-<LI><a href="#[1fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_buf
+<BR>[Calls]<UL><LI><a href="#[1fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_buf
 <LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_refr_get_disp_refreshing
+<LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_get_width
+<LI><a href="#[21e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_color_mix
 </UL>
-<BR>[Called By]<UL><LI><a href="#[21c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_aa_hor_seg
-<LI><a href="#[219]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_aa_ver_seg
-<LI><a href="#[252]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_shadow_full
+<BR>[Called By]<UL><LI><a href="#[252]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_shadow_full
 <LI><a href="#[250]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_shadow_bottom
 <LI><a href="#[24b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_rect_main_corner
 <LI><a href="#[244]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_rect_border_corner
 <LI><a href="#[23d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;line_draw_skew
+<LI><a href="#[21c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_aa_hor_seg
+<LI><a href="#[219]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_aa_ver_seg
 </UL>
 
 <P><STRONG><a name="[220]"></a>lv_draw_fill</STRONG> (Thumb, 158 bytes, Stack size 72 bytes, lv_draw_basic.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 156<LI>Call Chain = lv_draw_fill &rArr; sw_color_fill &rArr; lv_color_mix
 </UL>
-<BR>[Calls]<UL><LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_get_width
-<LI><a href="#[21f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sw_color_fill
-<LI><a href="#[1fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_buf
+<BR>[Calls]<UL><LI><a href="#[1fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_buf
 <LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_refr_get_disp_refreshing
 <LI><a href="#[1c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_intersect
+<LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_get_width
+<LI><a href="#[21f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sw_color_fill
 </UL>
 <BR>[Called By]<UL><LI><a href="#[257]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tri_draw_tall
 <LI><a href="#[255]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tri_draw_flat
@@ -4258,12 +4258,12 @@ Global Symbols
 <P><STRONG><a name="[221]"></a>lv_draw_letter</STRONG> (Thumb, 848 bytes, Stack size 168 bytes, lv_draw_basic.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 192<LI>Call Chain = lv_draw_letter &rArr; lv_font_get_glyph_dsc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_get_width
-<LI><a href="#[21e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_color_mix
-<LI><a href="#[1fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_buf
+<BR>[Calls]<UL><LI><a href="#[1fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_buf
 <LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_refr_get_disp_refreshing
 <LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_font_get_glyph_dsc
 <LI><a href="#[223]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_font_get_glyph_bitmap
+<LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_get_width
+<LI><a href="#[21e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_color_mix
 </UL>
 <BR>[Called By]<UL><LI><a href="#[22a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_label
 </UL>
@@ -4271,12 +4271,12 @@ Global Symbols
 <P><STRONG><a name="[225]"></a>lv_draw_map</STRONG> (Thumb, 798 bytes, Stack size 112 bytes, lv_draw_basic.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 172<LI>Call Chain = lv_draw_map &rArr; sw_mem_blend &rArr; lv_color_mix
 </UL>
-<BR>[Calls]<UL><LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_get_width
-<LI><a href="#[224]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sw_mem_blend
-<LI><a href="#[21e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_color_mix
-<LI><a href="#[1fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_buf
+<BR>[Calls]<UL><LI><a href="#[1fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_buf
 <LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_refr_get_disp_refreshing
 <LI><a href="#[1c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_intersect
+<LI><a href="#[21d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_get_width
+<LI><a href="#[224]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sw_mem_blend
+<LI><a href="#[21e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_color_mix
 </UL>
 <BR>[Called By]<UL><LI><a href="#[226]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_draw_core
 </UL>
@@ -4348,12 +4348,12 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[22f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_img
 <LI><a href="#[226]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_draw_core
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_design
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_design
 <LI><a href="#[2dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_draw_y_ticks
 <LI><a href="#[2dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_draw_x_ticks
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_design
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_scrollable_design
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_design
 </UL>
 
 <P><STRONG><a name="[242]"></a>lv_draw_line</STRONG> (Thumb, 826 bytes, Stack size 80 bytes, lv_draw_line.o(.text))
@@ -4391,22 +4391,22 @@ Global Symbols
 <LI><a href="#[22a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_label
 <LI><a href="#[22f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_img
 <LI><a href="#[226]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_draw_core
-<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_design
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_design
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_design
 <LI><a href="#[2e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_draw_cols
 <LI><a href="#[2e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_draw_points
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_design
+<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_design
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_scrollable_design
 <LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_slider_design
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_design
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_design
 </UL>
 
 <P><STRONG><a name="[255]"></a>tri_draw_flat</STRONG> (Thumb, 1112 bytes, Stack size 128 bytes, lv_draw_triangle.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 284<LI>Call Chain = tri_draw_flat &rArr; lv_draw_fill &rArr; sw_color_fill &rArr; lv_color_mix
 </UL>
-<BR>[Calls]<UL><LI><a href="#[220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_fill
-<LI><a href="#[256]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;point_swap
+<BR>[Calls]<UL><LI><a href="#[256]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;point_swap
+<LI><a href="#[220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_fill
 </UL>
 <BR>[Called By]<UL><LI><a href="#[258]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_triangle
 </UL>
@@ -4414,8 +4414,8 @@ Global Symbols
 <P><STRONG><a name="[257]"></a>tri_draw_tall</STRONG> (Thumb, 928 bytes, Stack size 120 bytes, lv_draw_triangle.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 276<LI>Call Chain = tri_draw_tall &rArr; lv_draw_fill &rArr; sw_color_fill &rArr; lv_color_mix
 </UL>
-<BR>[Calls]<UL><LI><a href="#[220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_fill
-<LI><a href="#[256]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;point_swap
+<BR>[Calls]<UL><LI><a href="#[256]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;point_swap
+<LI><a href="#[220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_fill
 </UL>
 <BR>[Called By]<UL><LI><a href="#[258]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_triangle
 </UL>
@@ -4602,13 +4602,13 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[237]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_txt_get_width
 <LI><a href="#[236]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_txt_get_next_line
 <LI><a href="#[22a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_label
+<LI><a href="#[339]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_letter_on
+<LI><a href="#[3ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;refr_cursor_area
+<LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_text
 <LI><a href="#[352]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_is_char_under_pos
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_design
 <LI><a href="#[33b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_refr_text
-<LI><a href="#[339]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_letter_on
 <LI><a href="#[3d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabview_realign
-<LI><a href="#[3ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;refr_cursor_area
-<LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_text
 </UL>
 
 <P><STRONG><a name="[6]"></a>lv_font_get_bitmap_fmt_txt</STRONG> (Thumb, 52 bytes, Stack size 24 bytes, lv_font_fmt_txt.o(.text))
@@ -4762,14 +4762,14 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[1fb]"></a>lv_disp_get_buf</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, lv_hal_disp.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_fill
-<LI><a href="#[21b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_px
-<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_refr_task
+<BR><BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_refr_task
 <LI><a href="#[203]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_refr_area
 <LI><a href="#[201]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_refr_area_part
 <LI><a href="#[1fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_refr_vdb_flush
 <LI><a href="#[225]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_map
 <LI><a href="#[221]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_letter
+<LI><a href="#[220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_fill
+<LI><a href="#[21b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_px
 </UL>
 
 <P><STRONG><a name="[1ad]"></a>lv_disp_get_inv_buf_size</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, lv_hal_disp.o(.text))
@@ -4895,9 +4895,9 @@ Global Symbols
 <BR>[Address Reference Count : 9]<UL><LI> lv_anim.o(.text)
 <LI> lv_style.o(.text)
 <LI> lv_page.o(.text)
+<LI> lv_list.o(.text)
 <LI> lv_bar.o(.text)
 <LI> lv_label.o(.text)
-<LI> lv_list.o(.text)
 <LI> lv_mbox.o(.text)
 <LI> lv_tabview.o(.text)
 <LI> demo.o(.text)
@@ -4920,10 +4920,10 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[1dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_del
 <LI><a href="#[1d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delete_children
 <LI><a href="#[27a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_anim_create
-<LI><a href="#[348]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_long_mode
-<LI><a href="#[33b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_refr_text
 <LI><a href="#[383]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_stop_auto_close
 <LI><a href="#[360]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_focus
+<LI><a href="#[348]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_long_mode
+<LI><a href="#[33b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_refr_text
 </UL>
 
 <P><STRONG><a name="[27a]"></a>lv_anim_create</STRONG> (Thumb, 80 bytes, Stack size 16 bytes, lv_anim.o(.text))
@@ -4935,11 +4935,6 @@ Global Symbols
 <LI><a href="#[210]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[29e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_set_value
-<LI><a href="#[33b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_refr_text
-<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
-<LI><a href="#[32d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_text
-<LI><a href="#[326]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_char
-<LI><a href="#[3d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_set_tab_act
 <LI><a href="#[3c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_blink_time
 <LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_text
 <LI><a href="#[3be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_create
@@ -4950,6 +4945,11 @@ Global Symbols
 <LI><a href="#[360]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_focus
 <LI><a href="#[375]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_down
 <LI><a href="#[374]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_up
+<LI><a href="#[33b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_refr_text
+<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
+<LI><a href="#[32d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_text
+<LI><a href="#[326]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_char
+<LI><a href="#[3d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_set_tab_act
 <LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;text_area_event_handler
 <LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;keyboard_event_cb
 </UL>
@@ -5027,13 +5027,13 @@ Global Symbols
 <P><STRONG><a name="[1c9]"></a>lv_area_intersect</STRONG> (Thumb, 130 bytes, Stack size 12 bytes, lv_area.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = lv_area_intersect
 </UL>
-<BR>[Called By]<UL><LI><a href="#[220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_fill
-<LI><a href="#[201]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_refr_area_part
+<BR>[Called By]<UL><LI><a href="#[201]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_refr_area_part
 <LI><a href="#[1fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_refr_obj
 <LI><a href="#[1ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_inv_area
 <LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_invalidate
 <LI><a href="#[226]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_draw_core
 <LI><a href="#[225]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_map
+<LI><a href="#[220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_fill
 <LI><a href="#[2e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_draw_cols
 </UL>
 
@@ -5377,25 +5377,25 @@ Global Symbols
 <LI><a href="#[28a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ent_alloc
 <LI><a href="#[28d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
-<BR>[Called By]<UL><LI><a href="#[218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_get_buf
-<LI><a href="#[214]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_style_anim_init
+<BR>[Called By]<UL><LI><a href="#[214]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_style_anim_init
 <LI><a href="#[1f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_realloc
 <LI><a href="#[1c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_cache_set_size
 <LI><a href="#[1de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_async_call
 <LI><a href="#[18f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ll_ins_tail
 <LI><a href="#[17e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ll_ins_head
 <LI><a href="#[261]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_decoder_built_in_open
+<LI><a href="#[218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_get_buf
 <LI><a href="#[287]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ll_ins_prev
-<LI><a href="#[34e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_array_text
-<LI><a href="#[337]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_dot_tmp
 <LI><a href="#[2ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_set_point_count
 <LI><a href="#[2e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_add_series
 <LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_text
 <LI><a href="#[317]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_set_src
 <LI><a href="#[2b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;allocate_btn_areas_and_controls
+<LI><a href="#[3c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_pwd_mode
+<LI><a href="#[34e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_array_text
+<LI><a href="#[337]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_dot_tmp
 <LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_create
 <LI><a href="#[3da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_add_tab
-<LI><a href="#[3c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_pwd_mode
 </UL>
 
 <P><STRONG><a name="[28e]"></a>lv_mem_get_size</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, lv_mem.o(.text))
@@ -5429,9 +5429,6 @@ Global Symbols
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_async_task_cb
 <LI><a href="#[279]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;anim_ready_handler
 <LI><a href="#[274]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_remove
-<LI><a href="#[34e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_array_text
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_signal
-<LI><a href="#[336]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_dot_tmp_free
 <LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_signal
 <LI><a href="#[2ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_set_point_count
 <LI><a href="#[2e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_add_series
@@ -5441,9 +5438,12 @@ Global Symbols
 <LI><a href="#[317]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_set_src
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_signal
 <LI><a href="#[2b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;allocate_btn_areas_and_controls
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_signal
 <LI><a href="#[3c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_pwd_mode
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_signal
+<LI><a href="#[34e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_array_text
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_signal
+<LI><a href="#[336]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_dot_tmp_free
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_signal
 </UL>
 
 <P><STRONG><a name="[1f1]"></a>lv_mem_realloc</STRONG> (Thumb, 108 bytes, Stack size 24 bytes, lv_mem.o(.text))
@@ -5456,17 +5456,17 @@ Global Symbols
 <LI><a href="#[28b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ent_trunc
 <LI><a href="#[20c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
-<BR>[Called By]<UL><LI><a href="#[218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_get_buf
-<LI><a href="#[1f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_allocate_ext_attr
+<BR>[Called By]<UL><LI><a href="#[1f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_allocate_ext_attr
+<LI><a href="#[218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_get_buf
+<LI><a href="#[2ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_set_point_count
+<LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_text
+<LI><a href="#[34d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_create
+<LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_text
 <LI><a href="#[353]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_ins_text
 <LI><a href="#[329]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_del_char
 <LI><a href="#[32d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_text
 <LI><a href="#[326]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_char
-<LI><a href="#[2ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_set_point_count
-<LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_text
-<LI><a href="#[34d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_create
 <LI><a href="#[3da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_add_tab
-<LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_text
 </UL>
 
 <P><STRONG><a name="[28f]"></a>lv_mem_defrag</STRONG> (Thumb, 110 bytes, Stack size 16 bytes, lv_mem.o(.text), UNUSED)
@@ -5582,8 +5582,8 @@ Global Symbols
 <P><STRONG><a name="[299]"></a>lv_txt_is_cmd</STRONG> (Thumb, 66 bytes, Stack size 0 bytes, lv_txt.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[237]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_txt_get_width
 <LI><a href="#[236]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_txt_get_next_line
-<LI><a href="#[352]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_is_char_under_pos
 <LI><a href="#[339]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_letter_on
+<LI><a href="#[352]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_is_char_under_pos
 </UL>
 
 <P><STRONG><a name="[237]"></a>lv_txt_get_width</STRONG> (Thumb, 140 bytes, Stack size 48 bytes, lv_txt.o(.text))
@@ -5594,9 +5594,9 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[235]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_txt_get_size
 <LI><a href="#[22a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_label
+<LI><a href="#[339]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_letter_on
 <LI><a href="#[352]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_is_char_under_pos
 <LI><a href="#[351]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_letter_pos
-<LI><a href="#[339]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_letter_on
 </UL>
 
 <P><STRONG><a name="[236]"></a>lv_txt_get_next_line</STRONG> (Thumb, 272 bytes, Stack size 64 bytes, lv_txt.o(.text))
@@ -5607,9 +5607,9 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[235]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_txt_get_size
 <LI><a href="#[22a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_label
+<LI><a href="#[339]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_letter_on
 <LI><a href="#[352]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_is_char_under_pos
 <LI><a href="#[351]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_letter_pos
-<LI><a href="#[339]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_letter_on
 </UL>
 
 <P><STRONG><a name="[235]"></a>lv_txt_get_size</STRONG> (Thumb, 204 bytes, Stack size 64 bytes, lv_txt.o(.text))
@@ -5619,12 +5619,12 @@ Global Symbols
 <LI><a href="#[236]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_txt_get_next_line
 </UL>
 <BR>[Called By]<UL><LI><a href="#[22a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_label
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_design
-<LI><a href="#[33b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_refr_text
 <LI><a href="#[2dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_draw_y_ticks
 <LI><a href="#[2dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_draw_x_ticks
 <LI><a href="#[317]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_set_src
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_design
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_design
+<LI><a href="#[33b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_refr_text
 </UL>
 
 <P><STRONG><a name="[29a]"></a>lv_txt_ins</STRONG> (Thumb, 74 bytes, Stack size 32 bytes, lv_txt.o(.text))
@@ -5872,23 +5872,23 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[29d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_ext_attr
 <LI><a href="#[1cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_style
 </UL>
-<BR>[Called By]<UL><LI><a href="#[335]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_get_style
-<LI><a href="#[2bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_set_map
+<BR>[Called By]<UL><LI><a href="#[2bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_set_map
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_signal
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_design
-<LI><a href="#[3d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_get_style
 <LI><a href="#[378]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_get_style
+<LI><a href="#[335]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_get_style
+<LI><a href="#[3d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_get_style
 </UL>
 
 <P><STRONG><a name="[2bb]"></a>lv_btnm_set_map</STRONG> (Thumb, 560 bytes, Stack size 96 bytes, lv_btnm.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 188 + Unknown Stack Size
 <LI>Call Chain = lv_btnm_set_map &rArr; lv_obj_invalidate &rArr; lv_inv_area &rArr; lv_area_intersect
 </UL>
-<BR>[Calls]<UL><LI><a href="#[24c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_set
-<LI><a href="#[29d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_ext_attr
+<BR>[Calls]<UL><LI><a href="#[29d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_ext_attr
 <LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_width
 <LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_height
 <LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_invalidate
+<LI><a href="#[24c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_set
 <LI><a href="#[2b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_get_style
 <LI><a href="#[2ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;maps_are_identical
 <LI><a href="#[2b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;allocate_btn_areas_and_controls
@@ -5896,16 +5896,16 @@ Global Symbols
 <LI><a href="#[12b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
 <LI><a href="#[29b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 </UL>
-<BR>[Called By]<UL><LI><a href="#[330]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_set_mode
-<LI><a href="#[32e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_create
-<LI><a href="#[325]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_def_event_cb
-<LI><a href="#[2d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_set_btn_width
+<BR>[Called By]<UL><LI><a href="#[2d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_set_btn_width
 <LI><a href="#[2d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_set_ctrl_map
 <LI><a href="#[2cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_create
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_signal
+<LI><a href="#[380]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_add_btns
+<LI><a href="#[330]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_set_mode
+<LI><a href="#[32e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_create
+<LI><a href="#[325]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_def_event_cb
 <LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_create
 <LI><a href="#[3da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_add_tab
-<LI><a href="#[380]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_add_btns
 </UL>
 
 <P><STRONG><a name="[2bd]"></a>lv_btnm_set_style</STRONG> (Thumb, 98 bytes, Stack size 24 bytes, lv_btnm.o(.text))
@@ -5915,11 +5915,11 @@ Global Symbols
 <LI><a href="#[1e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_style
 <LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_invalidate
 </UL>
-<BR>[Called By]<UL><LI><a href="#[321]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_set_style
-<LI><a href="#[2cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_create
-<LI><a href="#[3db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_set_style
+<BR>[Called By]<UL><LI><a href="#[2cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_create
 <LI><a href="#[380]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_add_btns
 <LI><a href="#[37a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_set_style
+<LI><a href="#[321]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_set_style
+<LI><a href="#[3db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_set_style
 </UL>
 
 <P><STRONG><a name="[2c5]"></a>lv_btnm_set_btn_ctrl</STRONG> (Thumb, 54 bytes, Stack size 24 bytes, lv_btnm.o(.text))
@@ -5960,8 +5960,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[29d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_ext_attr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[325]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_def_event_cb
-<LI><a href="#[2c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;make_one_button_toggled
+<BR>[Called By]<UL><LI><a href="#[2c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;make_one_button_toggled
+<LI><a href="#[325]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_def_event_cb
 </UL>
 
 <P><STRONG><a name="[2cf]"></a>lv_btnm_create</STRONG> (Thumb, 324 bytes, Stack size 32 bytes, lv_btnm.o(.text))
@@ -5983,10 +5983,10 @@ Global Symbols
 <LI><a href="#[2b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_get_map_array
 <LI><a href="#[210]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
-<BR>[Called By]<UL><LI><a href="#[32e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_create
-<LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_create
-<LI><a href="#[380]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_add_btns
+<BR>[Called By]<UL><LI><a href="#[380]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_add_btns
 <LI><a href="#[37e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_create
+<LI><a href="#[32e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_create
+<LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_create
 </UL>
 
 <P><STRONG><a name="[2d0]"></a>lv_btnm_set_ctrl_map</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, lv_btnm.o(.text))
@@ -6044,10 +6044,10 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[29d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_ext_attr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[325]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_def_event_cb
-<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tab_btnm_event_cb
-<LI><a href="#[37d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_get_active_btn
+<BR>[Called By]<UL><LI><a href="#[37d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_get_active_btn
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_signal
+<LI><a href="#[325]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_def_event_cb
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tab_btnm_event_cb
 </UL>
 
 <P><STRONG><a name="[2d8]"></a>lv_btnm_get_btn_text</STRONG> (Thumb, 84 bytes, Stack size 24 bytes, lv_btnm.o(.text))
@@ -6065,8 +6065,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[29d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_ext_attr
 <LI><a href="#[2d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_get_btn_text
 </UL>
-<BR>[Called By]<UL><LI><a href="#[325]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_def_event_cb
-<LI><a href="#[386]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_get_active_btn_text
+<BR>[Called By]<UL><LI><a href="#[386]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_get_active_btn_text
+<LI><a href="#[325]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_def_event_cb
 </UL>
 
 <P><STRONG><a name="[2da]"></a>lv_btnm_get_pressed_btn</STRONG> (Thumb, 16 bytes, Stack size 16 bytes, lv_btnm.o(.text), UNUSED)
@@ -6277,8 +6277,8 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[369]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_create
 <LI><a href="#[2b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btn_create
-<LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_create
 <LI><a href="#[37e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_create
+<LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_create
 </UL>
 
 <P><STRONG><a name="[2b2]"></a>lv_cont_set_layout</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, lv_cont.o(.text))
@@ -6287,11 +6287,11 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[29d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_ext_attr
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btn_create
-<LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_create
-<LI><a href="#[3d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabview_realign
 <LI><a href="#[37e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_create
 <LI><a href="#[368]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_create
 <LI><a href="#[363]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_add_btn
+<LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_create
+<LI><a href="#[3d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabview_realign
 </UL>
 
 <P><STRONG><a name="[311]"></a>lv_cont_set_fit4</STRONG> (Thumb, 120 bytes, Stack size 32 bytes, lv_cont.o(.text))
@@ -6301,11 +6301,11 @@ Global Symbols
 <LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_invalidate
 </UL>
 <BR>[Called By]<UL><LI><a href="#[369]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_create
-<LI><a href="#[3d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_cont_set_fit2
 <LI><a href="#[3a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_set_scrl_fit2
 <LI><a href="#[37e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_create
 <LI><a href="#[37c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_start_auto_close
 <LI><a href="#[365]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_cont_set_fit2
+<LI><a href="#[3d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_cont_set_fit2
 </UL>
 
 <P><STRONG><a name="[312]"></a>lv_cont_get_fit_left</STRONG> (Thumb, 20 bytes, Stack size 16 bytes, lv_cont.o(.text))
@@ -6445,6 +6445,11 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[29d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_ext_attr
 <LI><a href="#[1dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_del
 <LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
+<LI><a href="#[2d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_get_active_btn_text
+<LI><a href="#[2d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_get_active_btn
+<LI><a href="#[2d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_set_ctrl_map
+<LI><a href="#[2c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_get_btn_ctrl
+<LI><a href="#[2bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_set_map
 <LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
 <LI><a href="#[32b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_get_text
 <LI><a href="#[32a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_get_cursor_pos
@@ -6454,11 +6459,6 @@ Global Symbols
 <LI><a href="#[32d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_text
 <LI><a href="#[326]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_char
 <LI><a href="#[322]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_set_ta
-<LI><a href="#[2d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_get_active_btn_text
-<LI><a href="#[2d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_get_active_btn
-<LI><a href="#[2d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_set_ctrl_map
-<LI><a href="#[2c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_get_btn_ctrl
-<LI><a href="#[2bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_set_map
 <LI><a href="#[12b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;keyboard_event_cb
@@ -6481,10 +6481,10 @@ Global Symbols
 <LI><a href="#[1d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_signal_cb
 <LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_theme_get_current
 <LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_parent
-<LI><a href="#[321]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_set_style
 <LI><a href="#[2d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_set_ctrl_map
 <LI><a href="#[2cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_create
 <LI><a href="#[2bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_set_map
+<LI><a href="#[321]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_set_style
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;text_area_event_handler
 </UL>
@@ -6522,13 +6522,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[29d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_ext_attr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[354]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_cut_text
-<LI><a href="#[352]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_is_char_under_pos
-<LI><a href="#[351]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_letter_pos
-<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
-<LI><a href="#[32b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_get_text
-<LI><a href="#[329]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_del_char
-<LI><a href="#[339]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_letter_on
+<BR>[Called By]<UL><LI><a href="#[339]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_letter_on
 <LI><a href="#[34d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_create
 <LI><a href="#[3c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_get_placeholder_text
 <LI><a href="#[3c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_pwd_mode
@@ -6537,6 +6531,12 @@ Global Symbols
 <LI><a href="#[3ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;refr_cursor_area
 <LI><a href="#[385]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_get_text
 <LI><a href="#[35d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_get_btn_text
+<LI><a href="#[354]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_cut_text
+<LI><a href="#[352]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_is_char_under_pos
+<LI><a href="#[351]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_letter_pos
+<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
+<LI><a href="#[32b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_get_text
+<LI><a href="#[329]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_del_char
 </UL>
 
 <P><STRONG><a name="[339]"></a>lv_label_get_letter_on</STRONG> (Thumb, 386 bytes, Stack size 96 bytes, lv_label.o(.text))
@@ -6549,13 +6549,13 @@ Global Symbols
 <LI><a href="#[236]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_txt_get_next_line
 <LI><a href="#[239]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_font_get_glyph_width
 <LI><a href="#[299]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_txt_is_cmd
-<LI><a href="#[33a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_font_get_line_height
 <LI><a href="#[338]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_text
+<LI><a href="#[33a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_font_get_line_height
 </UL>
-<BR>[Called By]<UL><LI><a href="#[33b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_refr_text
-<LI><a href="#[3bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_cursor_up
+<BR>[Called By]<UL><LI><a href="#[3bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_cursor_up
 <LI><a href="#[3bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_cursor_down
 <LI><a href="#[3b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_cursor_position_on_click
+<LI><a href="#[33b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_refr_text
 </UL>
 
 <P><STRONG><a name="[33d]"></a>lv_label_set_static_text</STRONG> (Thumb, 58 bytes, Stack size 16 bytes, lv_label.o(.text))
@@ -6582,8 +6582,7 @@ Global Symbols
 <LI><a href="#[29b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 <LI><a href="#[318]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcpy
 </UL>
-<BR>[Called By]<UL><LI><a href="#[329]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_del_char
-<LI><a href="#[34d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_create
+<BR>[Called By]<UL><LI><a href="#[34d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_create
 <LI><a href="#[3c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_pwd_mode
 <LI><a href="#[3c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_placeholder_text
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_signal
@@ -6594,6 +6593,7 @@ Global Symbols
 <LI><a href="#[381]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_set_text
 <LI><a href="#[37e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_create
 <LI><a href="#[363]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_add_btn
+<LI><a href="#[329]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_del_char
 </UL>
 
 <P><STRONG><a name="[33f]"></a>lv_label_get_align</STRONG> (Thumb, 20 bytes, Stack size 16 bytes, lv_label.o(.text))
@@ -6701,6 +6701,11 @@ Global Symbols
 <LI><a href="#[1d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_signal_cb
 <LI><a href="#[1d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_design_cb
 <LI><a href="#[28e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_get_size
+<LI><a href="#[340]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_align
+<LI><a href="#[33f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_align
+<LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_text
+<LI><a href="#[33d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_static_text
+<LI><a href="#[338]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_text
 <LI><a href="#[348]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_long_mode
 <LI><a href="#[345]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_long_mode
 <LI><a href="#[344]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_recolor
@@ -6708,11 +6713,6 @@ Global Symbols
 <LI><a href="#[342]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_body_draw
 <LI><a href="#[341]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_body_draw
 <LI><a href="#[337]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_dot_tmp
-<LI><a href="#[340]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_align
-<LI><a href="#[33f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_align
-<LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_text
-<LI><a href="#[33d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_static_text
-<LI><a href="#[338]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_text
 <LI><a href="#[20c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 <LI><a href="#[29b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 </UL>
@@ -6752,13 +6752,13 @@ Global Symbols
 <LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_width
 <LI><a href="#[237]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_txt_get_width
 <LI><a href="#[236]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_txt_get_next_line
-<LI><a href="#[33a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_font_get_line_height
 <LI><a href="#[338]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_text
+<LI><a href="#[33a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_font_get_line_height
 </UL>
-<BR>[Called By]<UL><LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
-<LI><a href="#[3bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_cursor_up
+<BR>[Called By]<UL><LI><a href="#[3bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_cursor_up
 <LI><a href="#[3bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_cursor_down
 <LI><a href="#[3ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;refr_cursor_area
+<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
 </UL>
 
 <P><STRONG><a name="[352]"></a>lv_label_is_char_under_pos</STRONG> (Thumb, 448 bytes, Stack size 104 bytes, lv_label.o(.text), UNUSED)
@@ -6769,8 +6769,8 @@ Global Symbols
 <LI><a href="#[236]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_txt_get_next_line
 <LI><a href="#[239]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_font_get_glyph_width
 <LI><a href="#[299]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_txt_is_cmd
-<LI><a href="#[33a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_font_get_line_height
 <LI><a href="#[338]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_text
+<LI><a href="#[33a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_font_get_line_height
 </UL>
 
 <P><STRONG><a name="[353]"></a>lv_label_ins_text</STRONG> (Thumb, 120 bytes, Stack size 32 bytes, lv_label.o(.text))
@@ -6792,8 +6792,8 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[29d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_ext_attr
 <LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_invalidate
 <LI><a href="#[29c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_txt_cut
-<LI><a href="#[33b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_refr_text
 <LI><a href="#[338]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_text
+<LI><a href="#[33b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_refr_text
 </UL>
 
 <P><STRONG><a name="[356]"></a>lv_list_get_prev_btn</STRONG> (Thumb, 66 bytes, Stack size 24 bytes, lv_list.o(.text))
@@ -6892,7 +6892,6 @@ Global Symbols
 <LI><a href="#[1d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_signal_cb
 <LI><a href="#[1a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_group
 <LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_get_focused
-<LI><a href="#[348]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_long_mode
 <LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_text
 <LI><a href="#[34d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_create
 <LI><a href="#[317]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_set_src
@@ -6903,6 +6902,7 @@ Global Symbols
 <LI><a href="#[364]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_glue_obj
 <LI><a href="#[35e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_set_btn_selected
 <LI><a href="#[365]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_cont_set_fit2
+<LI><a href="#[348]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_long_mode
 </UL>
 <BR>[Called By]<UL><LI><a href="#[368]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_create
 <LI><a href="#[3eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;list_create
@@ -7068,7 +7068,6 @@ Global Symbols
 <LI><a href="#[1e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_align
 <LI><a href="#[1d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_signal_cb
 <LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_theme_get_current
-<LI><a href="#[348]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_long_mode
 <LI><a href="#[340]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_align
 <LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_text
 <LI><a href="#[34d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_create
@@ -7077,6 +7076,7 @@ Global Symbols
 <LI><a href="#[2b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_cont_set_layout
 <LI><a href="#[2b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_cont_create
 <LI><a href="#[37a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_set_style
+<LI><a href="#[348]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_long_mode
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;list_create
 </UL>
@@ -7146,11 +7146,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[29d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_ext_attr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_clean
-<LI><a href="#[3da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_add_tab
-<LI><a href="#[3d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_pressing_handler
-<LI><a href="#[3d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_press_lost_handler
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_signal
+<BR>[Called By]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_signal
 <LI><a href="#[3af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;placeholder_update
 <LI><a href="#[3a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_set_scrl_fit2
 <LI><a href="#[3ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_style
@@ -7168,6 +7164,10 @@ Global Symbols
 <LI><a href="#[368]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_create
 <LI><a href="#[35a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_get_next_btn
 <LI><a href="#[356]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_get_prev_btn
+<LI><a href="#[3dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_clean
+<LI><a href="#[3da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_add_tab
+<LI><a href="#[3d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_pressing_handler
+<LI><a href="#[3d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tabpage_press_lost_handler
 <LI><a href="#[3ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_create
 <LI><a href="#[3ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chart_create
 </UL>
@@ -7179,7 +7179,6 @@ Global Symbols
 <LI><a href="#[1cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_style
 </UL>
 <BR>[Called By]<UL><LI><a href="#[369]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_create
-<LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_create
 <LI><a href="#[3aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_get_style
 <LI><a href="#[39a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_get_fit_height
 <LI><a href="#[399]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_get_fit_width
@@ -7187,6 +7186,7 @@ Global Symbols
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_design
 <LI><a href="#[360]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_focus
 <LI><a href="#[372]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_get_style
+<LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_create
 </UL>
 
 <P><STRONG><a name="[38b]"></a>lv_page_scroll_hor</STRONG> (Thumb, 100 bytes, Stack size 56 bytes, lv_page.o(.text))
@@ -7223,11 +7223,11 @@ Global Symbols
 <LI><a href="#[389]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_sb_refresh
 </UL>
 <BR>[Called By]<UL><LI><a href="#[369]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_create
-<LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_create
-<LI><a href="#[3da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_add_tab
 <LI><a href="#[3ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_style
 <LI><a href="#[3be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_create
 <LI><a href="#[358]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_set_style
+<LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_create
+<LI><a href="#[3da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_add_tab
 <LI><a href="#[3ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_create
 <LI><a href="#[3eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;list_create
 <LI><a href="#[3ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chart_create
@@ -7241,9 +7241,9 @@ Global Symbols
 <LI><a href="#[389]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_sb_refresh
 </UL>
 <BR>[Called By]<UL><LI><a href="#[369]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_create
-<LI><a href="#[3da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_add_tab
 <LI><a href="#[3be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_create
 <LI><a href="#[368]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_create
+<LI><a href="#[3da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_add_tab
 <LI><a href="#[3ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_create
 <LI><a href="#[3eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;list_create
 <LI><a href="#[3ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;chart_create
@@ -7282,9 +7282,9 @@ Global Symbols
 <LI><a href="#[2b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_cont_create
 <LI><a href="#[389]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_sb_refresh
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_add_tab
-<LI><a href="#[3be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_create
+<BR>[Called By]<UL><LI><a href="#[3be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_create
 <LI><a href="#[368]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_create
+<LI><a href="#[3da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_add_tab
 </UL>
 
 <P><STRONG><a name="[393]"></a>lv_page_clean</STRONG> (Thumb, 20 bytes, Stack size 16 bytes, lv_page.o(.text), UNUSED)
@@ -7473,15 +7473,15 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[29d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_ext_attr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[328]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_cursor_right
+<BR>[Called By]<UL><LI><a href="#[3bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_cursor_up
+<LI><a href="#[3bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_cursor_down
+<LI><a href="#[3bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_del_char_forward
+<LI><a href="#[3ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;refr_cursor_area
+<LI><a href="#[328]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_cursor_right
 <LI><a href="#[327]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_cursor_left
 <LI><a href="#[32d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_text
 <LI><a href="#[326]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_char
 <LI><a href="#[325]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_def_event_cb
-<LI><a href="#[3bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_cursor_up
-<LI><a href="#[3bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_cursor_down
-<LI><a href="#[3bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_del_char_forward
-<LI><a href="#[3ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;refr_cursor_area
 </UL>
 
 <P><STRONG><a name="[3ae]"></a>lv_ta_set_style</STRONG> (Thumb, 116 bytes, Stack size 24 bytes, lv_ta.o(.text))
@@ -7504,9 +7504,9 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[29d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_ext_attr
 <LI><a href="#[338]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_text
 </UL>
-<BR>[Called By]<UL><LI><a href="#[325]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_def_event_cb
-<LI><a href="#[3b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;char_is_accepted
+<BR>[Called By]<UL><LI><a href="#[3b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;char_is_accepted
 <LI><a href="#[3af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;placeholder_update
+<LI><a href="#[325]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_def_event_cb
 </UL>
 
 <P><STRONG><a name="[3b0]"></a>lv_ta_set_one_line</STRONG> (Thumb, 264 bytes, Stack size 40 bytes, lv_ta.o(.text))
@@ -7517,12 +7517,12 @@ Global Symbols
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_height
 <LI><a href="#[1cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_style
 <LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_pos
-<LI><a href="#[348]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_long_mode
 <LI><a href="#[357]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_get_scrl
 <LI><a href="#[3ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_font_get_line_height
 <LI><a href="#[3af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;placeholder_update
 <LI><a href="#[3ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;refr_cursor_area
 <LI><a href="#[3a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_set_scrl_fit2
+<LI><a href="#[348]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_long_mode
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_create
 </UL>
@@ -7542,23 +7542,23 @@ Global Symbols
 <LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_coords
 <LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_parent
 <LI><a href="#[27a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_anim_create
-<LI><a href="#[351]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_letter_pos
 <LI><a href="#[338]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_text
 <LI><a href="#[3ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_font_get_line_height
 <LI><a href="#[3ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;refr_cursor_area
+<LI><a href="#[351]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_letter_pos
 </UL>
-<BR>[Called By]<UL><LI><a href="#[329]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_del_char
-<LI><a href="#[328]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_cursor_right
-<LI><a href="#[327]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_cursor_left
-<LI><a href="#[32d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_text
-<LI><a href="#[326]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_char
-<LI><a href="#[325]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_def_event_cb
-<LI><a href="#[3bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_cursor_up
+<BR>[Called By]<UL><LI><a href="#[3bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_cursor_up
 <LI><a href="#[3bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_cursor_down
 <LI><a href="#[3bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_del_char_forward
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_signal
 <LI><a href="#[3b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_cursor_position_on_click
 <LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_text
+<LI><a href="#[329]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_del_char
+<LI><a href="#[328]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_cursor_right
+<LI><a href="#[327]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_cursor_left
+<LI><a href="#[32d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_text
+<LI><a href="#[326]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_char
+<LI><a href="#[325]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_def_event_cb
 </UL>
 
 <P><STRONG><a name="[324]"></a>lv_ta_set_cursor_type</STRONG> (Thumb, 50 bytes, Stack size 16 bytes, lv_ta.o(.text))
@@ -7567,10 +7567,10 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[29d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_ext_attr
 <LI><a href="#[3ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;refr_cursor_area
 </UL>
-<BR>[Called By]<UL><LI><a href="#[331]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_set_cursor_manage
+<BR>[Called By]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_signal
+<LI><a href="#[331]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_set_cursor_manage
 <LI><a href="#[322]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_set_ta
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_signal
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_signal
 </UL>
 
 <P><STRONG><a name="[323]"></a>lv_ta_get_cursor_type</STRONG> (Thumb, 22 bytes, Stack size 16 bytes, lv_ta.o(.text))
@@ -7578,18 +7578,18 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[29d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_ext_attr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[331]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_set_cursor_manage
+<BR>[Called By]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_signal
+<LI><a href="#[331]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_set_cursor_manage
 <LI><a href="#[322]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_set_ta
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_signal
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_signal
 </UL>
 
 <P><STRONG><a name="[3ba]"></a>lv_ta_clear_selection</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, lv_ta.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[329]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_del_char
+<BR><BR>[Called By]<UL><LI><a href="#[3c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_pwd_mode
+<LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_text
+<LI><a href="#[329]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_del_char
 <LI><a href="#[32d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_text
 <LI><a href="#[326]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_char
-<LI><a href="#[3c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_pwd_mode
-<LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_text
 </UL>
 
 <P><STRONG><a name="[3b6]"></a>lv_ta_get_max_length</STRONG> (Thumb, 18 bytes, Stack size 16 bytes, lv_ta.o(.text))
@@ -7597,8 +7597,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[29d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_ext_attr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[32d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_text
-<LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_text
+<BR>[Called By]<UL><LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_text
+<LI><a href="#[32d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_text
 </UL>
 
 <P><STRONG><a name="[3b7]"></a>lv_ta_get_accepted_chars</STRONG> (Thumb, 16 bytes, Stack size 16 bytes, lv_ta.o(.text))
@@ -7606,8 +7606,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[29d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_ext_attr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[32d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_text
-<LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_text
+<BR>[Called By]<UL><LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_text
+<LI><a href="#[32d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_text
 </UL>
 
 <P><STRONG><a name="[32d]"></a>lv_ta_add_text</STRONG> (Thumb, 394 bytes, Stack size 64 bytes, lv_ta.o(.text))
@@ -7620,11 +7620,6 @@ Global Symbols
 <LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
 <LI><a href="#[29a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_txt_ins
 <LI><a href="#[27a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_anim_create
-<LI><a href="#[353]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_ins_text
-<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
-<LI><a href="#[32a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_get_cursor_pos
-<LI><a href="#[32d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_text
-<LI><a href="#[326]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_char
 <LI><a href="#[3b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_get_accepted_chars
 <LI><a href="#[3b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_get_max_length
 <LI><a href="#[3ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_clear_selection
@@ -7632,6 +7627,11 @@ Global Symbols
 <LI><a href="#[3b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_edge_flash
 <LI><a href="#[3b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwd_char_hider
 <LI><a href="#[3af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;placeholder_update
+<LI><a href="#[353]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_ins_text
+<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
+<LI><a href="#[32a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_get_cursor_pos
+<LI><a href="#[32d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_text
+<LI><a href="#[326]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_char
 <LI><a href="#[12b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
 <LI><a href="#[29b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 </UL>
@@ -7652,23 +7652,23 @@ Global Symbols
 <LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
 <LI><a href="#[29a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_txt_ins
 <LI><a href="#[27a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_anim_create
-<LI><a href="#[353]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_ins_text
-<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
-<LI><a href="#[32a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_get_cursor_pos
-<LI><a href="#[32d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_text
 <LI><a href="#[3ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_clear_selection
 <LI><a href="#[3b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_get_edge_flash
 <LI><a href="#[3b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_edge_flash
 <LI><a href="#[3b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;char_is_accepted
 <LI><a href="#[3b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwd_char_hider
 <LI><a href="#[3af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;placeholder_update
+<LI><a href="#[353]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_ins_text
+<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
+<LI><a href="#[32a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_get_cursor_pos
+<LI><a href="#[32d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_text
 <LI><a href="#[12b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
 <LI><a href="#[29b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 </UL>
-<BR>[Called By]<UL><LI><a href="#[32d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_text
-<LI><a href="#[325]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_def_event_cb
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_signal
+<BR>[Called By]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_signal
 <LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_text
+<LI><a href="#[32d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_text
+<LI><a href="#[325]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_def_event_cb
 <LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;list_btn_event_handler
 </UL>
 
@@ -7683,18 +7683,18 @@ Global Symbols
 <LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_width
 <LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
 <LI><a href="#[29c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_txt_cut
-<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
-<LI><a href="#[32d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_text
 <LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_text
 <LI><a href="#[338]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_text
 <LI><a href="#[3ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_clear_selection
 <LI><a href="#[3af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;placeholder_update
+<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
+<LI><a href="#[32d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_text
 <LI><a href="#[12b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
 <LI><a href="#[29b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 </UL>
-<BR>[Called By]<UL><LI><a href="#[325]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_def_event_cb
-<LI><a href="#[3bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_del_char_forward
+<BR>[Called By]<UL><LI><a href="#[3bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_del_char_forward
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_signal
+<LI><a href="#[325]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_def_event_cb
 </UL>
 
 <P><STRONG><a name="[3bb]"></a>lv_ta_del_char_forward</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, lv_ta.o(.text))
@@ -7715,11 +7715,11 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[29d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_ext_attr
 <LI><a href="#[1cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_style
 <LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_height
+<LI><a href="#[339]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_letter_on
+<LI><a href="#[3ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_font_get_line_height
 <LI><a href="#[351]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_letter_pos
 <LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
 <LI><a href="#[32a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_get_cursor_pos
-<LI><a href="#[339]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_letter_on
-<LI><a href="#[3ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_font_get_line_height
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_signal
 </UL>
@@ -7730,11 +7730,11 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[29d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_ext_attr
 <LI><a href="#[1cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_style
+<LI><a href="#[339]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_letter_on
+<LI><a href="#[3ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_font_get_line_height
 <LI><a href="#[351]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_letter_pos
 <LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
 <LI><a href="#[32a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_get_cursor_pos
-<LI><a href="#[339]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_letter_on
-<LI><a href="#[3ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_font_get_line_height
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_signal
 </UL>
@@ -7746,8 +7746,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
 <LI><a href="#[32a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_get_cursor_pos
 </UL>
-<BR>[Called By]<UL><LI><a href="#[325]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_def_event_cb
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_signal
+<BR>[Called By]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_signal
+<LI><a href="#[325]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_def_event_cb
 </UL>
 
 <P><STRONG><a name="[328]"></a>lv_ta_cursor_right</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, lv_ta.o(.text))
@@ -7757,8 +7757,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
 <LI><a href="#[32a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_get_cursor_pos
 </UL>
-<BR>[Called By]<UL><LI><a href="#[325]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_def_event_cb
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_signal
+<BR>[Called By]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_signal
+<LI><a href="#[325]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_def_event_cb
 </UL>
 
 <P><STRONG><a name="[3be]"></a>lv_ta_create</STRONG> (Thumb, 638 bytes, Stack size 64 bytes, lv_ta.o(.text))
@@ -7776,7 +7776,6 @@ Global Symbols
 <LI><a href="#[1d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_design_cb
 <LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_theme_get_current
 <LI><a href="#[27a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_anim_create
-<LI><a href="#[348]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_long_mode
 <LI><a href="#[359]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_set_style
 <LI><a href="#[36b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_set_sb_mode
 <LI><a href="#[357]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_get_scrl
@@ -7787,6 +7786,7 @@ Global Symbols
 <LI><a href="#[3a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_set_scrl_fit2
 <LI><a href="#[3ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_style
 <LI><a href="#[3b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_one_line
+<LI><a href="#[348]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_long_mode
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write_create
 </UL>
@@ -7803,13 +7803,13 @@ Global Symbols
 <LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_event_send
 <LI><a href="#[239]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_font_get_glyph_width
 <LI><a href="#[27a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_anim_create
-<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
-<LI><a href="#[326]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_char
 <LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_text
 <LI><a href="#[3b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_get_accepted_chars
 <LI><a href="#[3b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_get_max_length
 <LI><a href="#[3ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_clear_selection
 <LI><a href="#[3af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;placeholder_update
+<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
+<LI><a href="#[326]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_char
 <LI><a href="#[29b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 <LI><a href="#[318]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcpy
 </UL>
@@ -7818,10 +7818,10 @@ Global Symbols
 
 <P><STRONG><a name="[3c0]"></a>lv_ta_set_placeholder_text</STRONG> (Thumb, 72 bytes, Stack size 16 bytes, lv_ta.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[29d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_ext_attr
-<LI><a href="#[348]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_long_mode
 <LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_text
 <LI><a href="#[34d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_create
 <LI><a href="#[3af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;placeholder_update
+<LI><a href="#[348]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_long_mode
 </UL>
 
 <P><STRONG><a name="[3c1]"></a>lv_ta_set_cursor_click_pos</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, lv_ta.o(.text), UNUSED)
@@ -7849,12 +7849,12 @@ Global Symbols
 <P><STRONG><a name="[3c4]"></a>lv_ta_set_text_align</STRONG> (Thumb, 126 bytes, Stack size 24 bytes, lv_ta.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[29d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_ext_attr
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_width
-<LI><a href="#[348]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_long_mode
 <LI><a href="#[340]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_align
 <LI><a href="#[3c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_get_label
 <LI><a href="#[3ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;refr_cursor_area
 <LI><a href="#[3a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_set_scrl_fit2
 <LI><a href="#[399]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_get_fit_width
+<LI><a href="#[348]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_long_mode
 </UL>
 
 <P><STRONG><a name="[3c5]"></a>lv_ta_set_accepted_chars</STRONG> (Thumb, 18 bytes, Stack size 16 bytes, lv_ta.o(.text), UNUSED)
@@ -8106,19 +8106,19 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[1d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_create
 <LI><a href="#[19a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_report_style_mod
 <LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_create
-<LI><a href="#[2a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_create
-<LI><a href="#[32e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_create
 <LI><a href="#[369]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_create
 <LI><a href="#[2e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_create
 <LI><a href="#[2cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_create
 <LI><a href="#[2b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_cont_create
 <LI><a href="#[2b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btn_create
-<LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_create
+<LI><a href="#[2a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_create
 <LI><a href="#[3be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_create
 <LI><a href="#[3a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_slider_create
 <LI><a href="#[380]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_add_btns
 <LI><a href="#[37e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mbox_create
 <LI><a href="#[368]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_create
+<LI><a href="#[32e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_create
+<LI><a href="#[3dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_create
 </UL>
 
 <P><STRONG><a name="[dd]"></a>lv_port_disp_init</STRONG> (Thumb, 60 bytes, Stack size 40 bytes, lv_port_disp.o(.text))
@@ -8220,9 +8220,9 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_text
 <LI><a href="#[317]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_set_src
-<LI><a href="#[3da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_add_tab
 <LI><a href="#[3c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_pwd_mode
 <LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_text
+<LI><a href="#[3da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_add_tab
 </UL>
 
 <P><STRONG><a name="[29b]"></a>strlen</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, strlen.o(.text))
@@ -8230,35 +8230,35 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[29c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_txt_cut
 <LI><a href="#[29a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_txt_ins
-<LI><a href="#[353]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_ins_text
-<LI><a href="#[329]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_del_char
-<LI><a href="#[32d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_text
-<LI><a href="#[326]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_char
 <LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_text
 <LI><a href="#[34d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_create
 <LI><a href="#[317]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_set_src
 <LI><a href="#[2bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_set_map
 <LI><a href="#[2b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;allocate_btn_areas_and_controls
-<LI><a href="#[3da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_add_tab
 <LI><a href="#[3c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_pwd_mode
 <LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_text
+<LI><a href="#[353]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_ins_text
+<LI><a href="#[329]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_del_char
+<LI><a href="#[32d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_text
+<LI><a href="#[326]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_char
+<LI><a href="#[3da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tabview_add_tab
 </UL>
 
 <P><STRONG><a name="[20c]"></a>__aeabi_memcpy</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, rt_memcpy_v6.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[224]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sw_mem_blend
-<LI><a href="#[21f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sw_color_fill
-<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_refr_task
+<BR><BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_refr_task
 <LI><a href="#[1f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_realloc
 <LI><a href="#[232]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_buf_set_px_color
+<LI><a href="#[224]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sw_mem_blend
+<LI><a href="#[21f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sw_color_fill
 <LI><a href="#[29a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_txt_ins
 <LI><a href="#[286]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;node_set_next
 <LI><a href="#[285]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;node_set_prev
-<LI><a href="#[34e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_array_text
-<LI><a href="#[337]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_dot_tmp
 <LI><a href="#[2f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_set_points
 <LI><a href="#[34d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_create
 <LI><a href="#[2d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_set_ctrl_map
 <LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_scrollable_design
+<LI><a href="#[34e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_array_text
+<LI><a href="#[337]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_dot_tmp
 <LI><a href="#[3e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_theme_set_current
 </UL>
 
@@ -8342,10 +8342,6 @@ Global Symbols
 
 <P><STRONG><a name="[12b]"></a>strcmp</STRONG> (Thumb, 128 bytes, Stack size 0 bytes, strcmpv7m.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GT9147_Init
-<LI><a href="#[329]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_del_char
-<LI><a href="#[32d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_text
-<LI><a href="#[326]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_char
-<LI><a href="#[325]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_def_event_cb
 <LI><a href="#[2d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_get_btn_text
 <LI><a href="#[2bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_set_map
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_btnm_design
@@ -8354,6 +8350,10 @@ Global Symbols
 <LI><a href="#[366]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_is_list_img
 <LI><a href="#[35b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_is_list_label
 <LI><a href="#[355]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_is_list_btn
+<LI><a href="#[329]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_del_char
+<LI><a href="#[32d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_text
+<LI><a href="#[326]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_char
+<LI><a href="#[325]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_kb_def_event_cb
 </UL>
 
 <P><STRONG><a name="[519]"></a>__use_two_region_memory</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
@@ -9113,18 +9113,18 @@ Local Symbols
 <P><STRONG><a name="[21e]"></a>lv_color_mix</STRONG> (Thumb, 124 bytes, Stack size 20 bytes, lv_draw_basic.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = lv_color_mix
 </UL>
-<BR>[Called By]<UL><LI><a href="#[224]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sw_mem_blend
+<BR>[Called By]<UL><LI><a href="#[225]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_map
+<LI><a href="#[221]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_letter
+<LI><a href="#[224]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sw_mem_blend
 <LI><a href="#[21f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sw_color_fill
 <LI><a href="#[21b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_px
-<LI><a href="#[225]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_map
-<LI><a href="#[221]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_letter
 </UL>
 
 <P><STRONG><a name="[21f]"></a>sw_color_fill</STRONG> (Thumb, 328 bytes, Stack size 64 bytes, lv_draw_basic.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 84<LI>Call Chain = sw_color_fill &rArr; lv_color_mix
 </UL>
-<BR>[Calls]<UL><LI><a href="#[21e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_color_mix
-<LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_refr_get_disp_refreshing
+<BR>[Calls]<UL><LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_refr_get_disp_refreshing
+<LI><a href="#[21e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_color_mix
 <LI><a href="#[20c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_fill
@@ -9140,18 +9140,17 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[21d]"></a>lv_area_get_width</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, lv_draw_basic.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_fill
-<LI><a href="#[21b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_px
-<LI><a href="#[225]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_map
+<BR><BR>[Called By]<UL><LI><a href="#[225]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_map
 <LI><a href="#[221]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_letter
+<LI><a href="#[220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_fill
+<LI><a href="#[21b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_px
 </UL>
 
 <P><STRONG><a name="[226]"></a>lv_img_draw_core</STRONG> (Thumb, 384 bytes, Stack size 112 bytes, lv_draw_img.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 780 + Unknown Stack Size
 <LI>Call Chain = lv_img_draw_core &rArr; lv_draw_label &rArr; lv_draw_rect &rArr; lv_draw_shadow &rArr; lv_draw_shadow_full &rArr; lv_draw_shadow_full_straight &rArr; lv_draw_fill &rArr; sw_color_fill &rArr; lv_color_mix
 </UL>
-<BR>[Calls]<UL><LI><a href="#[218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_get_buf
-<LI><a href="#[1cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_rect
+<BR>[Calls]<UL><LI><a href="#[1cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_rect
 <LI><a href="#[1c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_intersect
 <LI><a href="#[22d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_decoder_read_line
 <LI><a href="#[22e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_decoder_close
@@ -9162,6 +9161,7 @@ Local Symbols
 <LI><a href="#[229]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_img_color_format_has_alpha
 <LI><a href="#[22b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_get_width
 <LI><a href="#[225]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_map
+<LI><a href="#[218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_get_buf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[22f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_img
 </UL>
@@ -9211,17 +9211,17 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 284 + Unknown Stack Size
 <LI>Call Chain = line_draw_skew &rArr; lv_draw_fill &rArr; sw_color_fill &rArr; lv_color_mix
 </UL>
-<BR>[Calls]<UL><LI><a href="#[220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_fill
-<LI><a href="#[21b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_px
-<LI><a href="#[21c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_aa_hor_seg
-<LI><a href="#[219]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_aa_ver_seg
-<LI><a href="#[218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_get_buf
-<LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_refr_get_disp_refreshing
+<BR>[Calls]<UL><LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_refr_get_disp_refreshing
 <LI><a href="#[23e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_antialiasing
 <LI><a href="#[23f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;line_init
 <LI><a href="#[23c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;line_next_y
 <LI><a href="#[23a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;line_next_x
 <LI><a href="#[23b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;line_next
+<LI><a href="#[220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_fill
+<LI><a href="#[21b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_px
+<LI><a href="#[21c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_aa_hor_seg
+<LI><a href="#[219]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_aa_ver_seg
+<LI><a href="#[218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_get_buf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[242]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_line
 </UL>
@@ -9275,10 +9275,7 @@ Local Symbols
 <P><STRONG><a name="[244]"></a>lv_draw_rect_border_corner</STRONG> (Thumb, 4282 bytes, Stack size 160 bytes, lv_draw_rect.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 316<LI>Call Chain = lv_draw_rect_border_corner &rArr; lv_draw_fill &rArr; sw_color_fill &rArr; lv_color_mix
 </UL>
-<BR>[Calls]<UL><LI><a href="#[220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_fill
-<LI><a href="#[21b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_px
-<LI><a href="#[21a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_aa_get_opa
-<LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_refr_get_disp_refreshing
+<BR>[Calls]<UL><LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_refr_get_disp_refreshing
 <LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_circ_next
 <LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_circ_init
 <LI><a href="#[246]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_get_height
@@ -9286,6 +9283,9 @@ Local Symbols
 <LI><a href="#[243]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_cont_radius_corr
 <LI><a href="#[248]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;antialias_get_opa_circ
 <LI><a href="#[23e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_antialiasing
+<LI><a href="#[220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_fill
+<LI><a href="#[21b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_px
+<LI><a href="#[21a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_aa_get_opa
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_rect
 </UL>
@@ -9293,12 +9293,12 @@ Local Symbols
 <P><STRONG><a name="[24a]"></a>lv_draw_rect_border_straight</STRONG> (Thumb, 1138 bytes, Stack size 80 bytes, lv_draw_rect.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 236<LI>Call Chain = lv_draw_rect_border_straight &rArr; lv_draw_fill &rArr; sw_color_fill &rArr; lv_color_mix
 </UL>
-<BR>[Calls]<UL><LI><a href="#[220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_fill
-<LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_refr_get_disp_refreshing
+<BR>[Calls]<UL><LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_refr_get_disp_refreshing
 <LI><a href="#[246]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_get_height
 <LI><a href="#[245]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_get_width
 <LI><a href="#[243]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_cont_radius_corr
 <LI><a href="#[23e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_antialiasing
+<LI><a href="#[220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_fill
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_rect
 </UL>
@@ -9306,11 +9306,7 @@ Local Symbols
 <P><STRONG><a name="[24b]"></a>lv_draw_rect_main_corner</STRONG> (Thumb, 3112 bytes, Stack size 184 bytes, lv_draw_rect.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 340<LI>Call Chain = lv_draw_rect_main_corner &rArr; lv_draw_fill &rArr; sw_color_fill &rArr; lv_color_mix
 </UL>
-<BR>[Calls]<UL><LI><a href="#[220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_fill
-<LI><a href="#[24c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_set
-<LI><a href="#[21b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_px
-<LI><a href="#[21a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_aa_get_opa
-<LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_refr_get_disp_refreshing
+<BR>[Calls]<UL><LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_refr_get_disp_refreshing
 <LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_circ_next
 <LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_circ_init
 <LI><a href="#[24e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_circ_cont
@@ -9320,6 +9316,10 @@ Local Symbols
 <LI><a href="#[248]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;antialias_get_opa_circ
 <LI><a href="#[24d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_color_mix
 <LI><a href="#[23e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_antialiasing
+<LI><a href="#[220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_fill
+<LI><a href="#[24c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_set
+<LI><a href="#[21b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_px
+<LI><a href="#[21a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_aa_get_opa
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_rect
 </UL>
@@ -9327,13 +9327,13 @@ Local Symbols
 <P><STRONG><a name="[24f]"></a>lv_draw_rect_main_mid</STRONG> (Thumb, 356 bytes, Stack size 88 bytes, lv_draw_rect.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 244<LI>Call Chain = lv_draw_rect_main_mid &rArr; lv_draw_fill &rArr; sw_color_fill &rArr; lv_color_mix
 </UL>
-<BR>[Calls]<UL><LI><a href="#[220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_fill
-<LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_refr_get_disp_refreshing
+<BR>[Calls]<UL><LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_refr_get_disp_refreshing
 <LI><a href="#[246]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_get_height
 <LI><a href="#[245]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_get_width
 <LI><a href="#[243]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_cont_radius_corr
 <LI><a href="#[24d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_color_mix
 <LI><a href="#[23e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_antialiasing
+<LI><a href="#[220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_fill
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_rect
 </UL>
@@ -9342,10 +9342,7 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 292 + Unknown Stack Size
 <LI>Call Chain = lv_draw_shadow_bottom &rArr; lv_draw_fill &rArr; sw_color_fill &rArr; lv_color_mix
 </UL>
-<BR>[Calls]<UL><LI><a href="#[220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_fill
-<LI><a href="#[21b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_px
-<LI><a href="#[218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_get_buf
-<LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_refr_get_disp_refreshing
+<BR>[Calls]<UL><LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_refr_get_disp_refreshing
 <LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_circ_next
 <LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_circ_init
 <LI><a href="#[24e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_circ_cont
@@ -9353,6 +9350,9 @@ Local Symbols
 <LI><a href="#[245]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_get_width
 <LI><a href="#[243]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_cont_radius_corr
 <LI><a href="#[23e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_antialiasing
+<LI><a href="#[220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_fill
+<LI><a href="#[21b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_px
+<LI><a href="#[218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_get_buf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[253]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_shadow
 </UL>
@@ -9360,12 +9360,12 @@ Local Symbols
 <P><STRONG><a name="[251]"></a>lv_draw_shadow_full_straight</STRONG> (Thumb, 434 bytes, Stack size 88 bytes, lv_draw_rect.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 244<LI>Call Chain = lv_draw_shadow_full_straight &rArr; lv_draw_fill &rArr; sw_color_fill &rArr; lv_color_mix
 </UL>
-<BR>[Calls]<UL><LI><a href="#[220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_fill
-<LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_refr_get_disp_refreshing
+<BR>[Calls]<UL><LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_refr_get_disp_refreshing
 <LI><a href="#[246]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_get_height
 <LI><a href="#[245]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_get_width
 <LI><a href="#[243]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_cont_radius_corr
 <LI><a href="#[23e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_antialiasing
+<LI><a href="#[220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_fill
 </UL>
 <BR>[Called By]<UL><LI><a href="#[252]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_shadow_full
 </UL>
@@ -9374,9 +9374,7 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 396 + Unknown Stack Size
 <LI>Call Chain = lv_draw_shadow_full &rArr; lv_draw_shadow_full_straight &rArr; lv_draw_fill &rArr; sw_color_fill &rArr; lv_color_mix
 </UL>
-<BR>[Calls]<UL><LI><a href="#[21b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_px
-<LI><a href="#[218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_get_buf
-<LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_refr_get_disp_refreshing
+<BR>[Calls]<UL><LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_refr_get_disp_refreshing
 <LI><a href="#[249]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_circ_next
 <LI><a href="#[247]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_circ_init
 <LI><a href="#[24e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_circ_cont
@@ -9385,6 +9383,8 @@ Local Symbols
 <LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_shadow_full_straight
 <LI><a href="#[243]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_cont_radius_corr
 <LI><a href="#[23e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_disp_get_antialiasing
+<LI><a href="#[21b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_px
+<LI><a href="#[218]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_get_buf
 <LI><a href="#[20d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
 <BR>[Called By]<UL><LI><a href="#[253]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_draw_shadow
@@ -10248,8 +10248,8 @@ Local Symbols
 <LI><a href="#[336]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_dot_tmp_free
 <LI><a href="#[20c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
-<BR>[Called By]<UL><LI><a href="#[33b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_refr_text
-<LI><a href="#[34d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_create
+<BR>[Called By]<UL><LI><a href="#[34d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_create
+<LI><a href="#[33b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_refr_text
 </UL>
 
 <P><STRONG><a name="[92]"></a>lv_label_set_offset_y</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, lv_label.o(.text))
@@ -10284,19 +10284,19 @@ Local Symbols
 <LI><a href="#[239]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_font_get_glyph_width
 <LI><a href="#[33c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_anim_speed_to_time
 <LI><a href="#[27a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_anim_create
+<LI><a href="#[339]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_letter_on
 <LI><a href="#[33a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_font_get_line_height
 <LI><a href="#[337]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_dot_tmp
-<LI><a href="#[339]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_letter_on
 </UL>
-<BR>[Called By]<UL><LI><a href="#[354]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_cut_text
+<BR>[Called By]<UL><LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_text
+<LI><a href="#[33d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_static_text
+<LI><a href="#[354]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_cut_text
 <LI><a href="#[353]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_ins_text
 <LI><a href="#[34f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_anim_speed
 <LI><a href="#[34e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_array_text
 <LI><a href="#[348]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_long_mode
 <LI><a href="#[344]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_recolor
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_signal
-<LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_text
-<LI><a href="#[33d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_static_text
 </UL>
 
 <P><STRONG><a name="[346]"></a>lv_label_get_dot_tmp</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, lv_label.o(.text))
@@ -10357,11 +10357,11 @@ Local Symbols
 <BR>[Address Reference Count : 1]<UL><LI> lv_label.o(.text)
 </UL>
 <P><STRONG><a name="[33a]"></a>lv_font_get_line_height</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, lv_label.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[352]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_is_char_under_pos
+<BR><BR>[Called By]<UL><LI><a href="#[339]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_letter_on
+<LI><a href="#[352]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_is_char_under_pos
 <LI><a href="#[351]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_letter_pos
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_design
 <LI><a href="#[33b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_refr_text
-<LI><a href="#[339]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_letter_on
 </UL>
 
 <P><STRONG><a name="[349]"></a>lv_area_get_width</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, lv_label.o(.text))
@@ -10780,22 +10780,22 @@ Local Symbols
 <LI><a href="#[1cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_style
 <LI><a href="#[16d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_disp
 <LI><a href="#[239]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_font_get_glyph_width
-<LI><a href="#[351]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_letter_pos
-<LI><a href="#[32a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_get_cursor_pos
 <LI><a href="#[33f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_align
 <LI><a href="#[338]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_text
 <LI><a href="#[3a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_area_copy
 <LI><a href="#[3ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_font_get_line_height
 <LI><a href="#[3ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_cursor_style
+<LI><a href="#[351]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_letter_pos
+<LI><a href="#[32a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_get_cursor_pos
 </UL>
-<BR>[Called By]<UL><LI><a href="#[324]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_type
-<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
-<LI><a href="#[3c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_text_align
+<BR>[Called By]<UL><LI><a href="#[3c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_text_align
 <LI><a href="#[3c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_pwd_mode
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_signal
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_scrollable_signal
 <LI><a href="#[3ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_style
 <LI><a href="#[3b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_one_line
+<LI><a href="#[324]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_type
+<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
 </UL>
 
 <P><STRONG><a name="[3af]"></a>placeholder_update</STRONG> (Thumb, 130 bytes, Stack size 32 bytes, lv_ta.o(.text))
@@ -10806,16 +10806,16 @@ Local Symbols
 <LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_width
 <LI><a href="#[1cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_style
 <LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_pos
-<LI><a href="#[32b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_get_text
 <LI><a href="#[357]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_get_scrl
 <LI><a href="#[399]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_get_fit_width
+<LI><a href="#[32b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_get_text
 </UL>
-<BR>[Called By]<UL><LI><a href="#[329]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_del_char
-<LI><a href="#[32d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_text
-<LI><a href="#[326]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_char
-<LI><a href="#[3c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_placeholder_text
+<BR>[Called By]<UL><LI><a href="#[3c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_placeholder_text
 <LI><a href="#[3bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_text
 <LI><a href="#[3b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_one_line
+<LI><a href="#[329]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_del_char
+<LI><a href="#[32d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_text
+<LI><a href="#[326]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_char
 </UL>
 
 <P><STRONG><a name="[af]"></a>lv_ta_scrollable_design</STRONG> (Thumb, 438 bytes, Stack size 136 bytes, lv_ta.o(.text))
@@ -10849,8 +10849,8 @@ Local Symbols
 <LI><a href="#[391]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_vect
 <LI><a href="#[2cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_point
 <LI><a href="#[2ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_type
-<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
 <LI><a href="#[339]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_letter_on
+<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_signal
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_scrollable_signal
@@ -10885,9 +10885,9 @@ Local Symbols
 <LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_text
 <LI><a href="#[338]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_get_text
 </UL>
-<BR>[Called By]<UL><LI><a href="#[32d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_text
+<BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwd_char_hider_anim_ready
+<LI><a href="#[32d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_text
 <LI><a href="#[326]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_char
-<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwd_char_hider_anim_ready
 </UL>
 
 <P><STRONG><a name="[ab]"></a>pwd_char_hider_anim_ready</STRONG> (Thumb, 14 bytes, Stack size 16 bytes, lv_ta.o(.text))
@@ -10926,13 +10926,6 @@ Local Symbols
 <LI><a href="#[1d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_indev_get_act
 <LI><a href="#[184]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_mem_free
 <LI><a href="#[1b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_group_get_editing
-<LI><a href="#[324]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_type
-<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
-<LI><a href="#[323]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_get_cursor_type
-<LI><a href="#[329]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_del_char
-<LI><a href="#[328]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_cursor_right
-<LI><a href="#[327]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_cursor_left
-<LI><a href="#[326]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_char
 <LI><a href="#[357]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_get_scrl
 <LI><a href="#[33e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_label_set_text
 <LI><a href="#[3bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_cursor_up
@@ -10944,17 +10937,24 @@ Local Symbols
 <LI><a href="#[3b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;update_cursor_position_on_click
 <LI><a href="#[3ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;refr_cursor_area
 <LI><a href="#[399]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_get_fit_width
+<LI><a href="#[324]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_type
+<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
+<LI><a href="#[323]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_get_cursor_type
+<LI><a href="#[329]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_del_char
+<LI><a href="#[328]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_cursor_right
+<LI><a href="#[327]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_cursor_left
+<LI><a href="#[326]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_char
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> lv_ta.o(.text)
 </UL>
 <P><STRONG><a name="[3ad]"></a>lv_font_get_line_height</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, lv_ta.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
-<LI><a href="#[3bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_cursor_up
+<BR><BR>[Called By]<UL><LI><a href="#[3bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_cursor_up
 <LI><a href="#[3bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_cursor_down
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_signal
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_scrollable_signal
 <LI><a href="#[3ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;refr_cursor_area
 <LI><a href="#[3b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_one_line
+<LI><a href="#[32c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_set_cursor_pos
 </UL>
 
 <P><STRONG><a name="[3a9]"></a>lv_area_copy</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, lv_ta.o(.text))
@@ -11193,8 +11193,6 @@ Local Symbols
 <LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_width
 <LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_get_height
 <LI><a href="#[199]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_style_copy
-<LI><a href="#[2a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_set_range
-<LI><a href="#[29e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_set_value
 <LI><a href="#[359]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_set_style
 <LI><a href="#[36b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_set_sb_mode
 <LI><a href="#[357]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_page_get_scrl
@@ -11203,6 +11201,8 @@ Local Symbols
 <LI><a href="#[2ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_set_type
 <LI><a href="#[2e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_add_series
 <LI><a href="#[2e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_chart_create
+<LI><a href="#[2a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_set_range
+<LI><a href="#[29e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_bar_set_value
 <LI><a href="#[3a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_slider_create
 <LI><a href="#[39d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_slider_set_style
 <LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;slider_event_handler
@@ -11214,9 +11214,9 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 584 + Unknown Stack Size
 <LI>Call Chain = list_btn_event_handler &rArr; lv_ta_add_text &rArr;  lv_ta_add_text (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[32d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_text
+<BR>[Calls]<UL><LI><a href="#[35d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_get_btn_text
+<LI><a href="#[32d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_text
 <LI><a href="#[326]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_ta_add_char
-<LI><a href="#[35d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_list_get_btn_text
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> demo.o(.text)
 </UL>
